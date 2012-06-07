@@ -1,0 +1,2289 @@
+# Japanese translations for 0.1 package
+# 0.1 パッケージに対する英訳.
+# Copyright (C) 2011, WAKAYAMA Shirou
+# This file is distributed under the same license as the BeautifulSoup Document package.
+# Automatically generated, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-08-06 00:29\n"
+"PO-Revision-Date: 2011-09-07 23:41+0900\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 7949f6529ae74c178c4c886c954a1291
+#: index.rst:2
+msgid "Beautiful Soup Documentation"
+msgstr "Beautiful Soupドキュメント"
+
+# 073cfd87da2342cbb6163916b80195f5
+#: index.rst:6
+msgid ""
+"`Beautiful Soup <http://www.crummy.com/software/BeautifulSoup/>`_ is an HTML/"
+"XML parser for Python that can turn even invalid markup into a parse tree. "
+"It provides simple, idiomatic ways of navigating, searching, and modifying "
+"the parse tree. It commonly saves programmers hours or days of work. There's "
+"also a Ruby port called `Rubyful Soup <http://www.crummy.com/software/"
+"RubyfulSoup/>`_ ."
+msgstr "`Beautiful Soup <http://www.crummy.com/software/BeautifulSoup/>`_ はpythonで動作するHTMLとXMLのパーサーです。Beautiful Soupはパースしたツリーの操作、検索、変更を簡単に、かつ、今までと同じ方法でできます。これにより、プログラマーの仕事時間を節約します。また、 `Rubyful Soup <http://www.crummy.com/software/RubyfulSoup/>`_ というRuby版もあります。"
+
+# 44c56d5e4c7b4918a453e2351c5b9622
+#: index.rst:13
+msgid ""
+"This document illustrates all major features of Beautiful Soup version 3.0, "
+"with examples. It shows you what the library is good for, how it works, how "
+"to use it, how to make it do what you want, and what to do when it violates "
+"your expectations."
+msgstr "このドキュメントはBeautiful Soupのバージョン3.0における主要な機能をサンプル付きで説明します。このドキュメントを読めばこのライブラリがどんなに良いか、どうやって動いているか、どうやって使うか、やりたいことをどうやって実現するか、予想と異なる動作をした場合になにをすればいいのかが分かります。"
+
+# 5b17700c26e64d5ebb91895c9aeb6174
+#: index.rst:19
+msgid "Quick Start"
+msgstr "クイックスタート"
+
+# e318311eb63148a3b679c3521f300001
+#: index.rst:21
+msgid ""
+"Get Beautiful Soup `here <http://www.crummy.com/software/BeautifulSoup/"
+"#Download/>`_ . The `changelog <http://www.crummy.com/software/BeautifulSoup/"
+"CHANGELOG.html>`_ describes differences between 3.0 and earlier versions."
+msgstr "Beautiful Soupを `ここから <http://www.crummy.com/software/BeautifulSoup/#Download/>`_ 手に入れます。 `ChangeLog <http://www.crummy.com/software/BeautifulSoup/CHANGELOG.html>`_ にはバージョン3.0とそれ以前のバージョンとの違いが書かれています。"
+
+# e3513dbbdfa040ae8850ebd352dbbfd8
+#: index.rst:26
+msgid ""
+"Include Beautiful Soup in your application with a line like one of the "
+"following:"
+msgstr "以下のうちのどれか一行を書き、Beautiful Soupを読み込みます。:"
+
+# 6b495955274541ac950c1a777ffe5bdd
+#: index.rst:35
+msgid ""
+"Here's some code demonstrating the basic features of Beautiful Soup. You can "
+"copy and paste this code into a Python session to run it yourself."
+msgstr "これはBeautiful Soupの基本的な機能を使うコードです。これは自由にコピーして構わないので、ご自分でPythonで実行してみてください。"
+
+# a84da2897764475caf787e385de7adb0
+#: index.rst:75
+msgid "Here are some ways to navigate the soup:"
+msgstr "soupを使って操作します。"
+
+# a2cd92925436476da7b455936d30e3b3
+#: index.rst:102
+msgid ""
+"Here are a couple of ways to search the soup for certain tags, or tags with "
+"certain properties:"
+msgstr "あるタグ、あるいは、あるプロパティを持っているタグを探すsoupを使います。"
+
+# 3ba63439224e40c797b3c4875712e294
+#: index.rst:135
+msgid "It's easy to modify the soup:"
+msgstr "soupを変更するのは簡単です。"
+
+# 6aa4c90ef4534f7988a852082e854e7b
+#: index.rst:183
+msgid ""
+"Here's a real-world example. It fetches the `ICC Commercial Crime Services "
+"weekly piracy report <http://www.icc-ccs.org/prc/piracyreport.php>`_ , "
+"parses it with Beautiful Soup, and pulls out the piracy incidents:"
+msgstr "これは実際に使われている例です。このコードは `ICC Commercial Crime Services の週間海賊報告 <http://www.icc-ccs.org/prc/piracyreport.php>`_ から取得、Beautiful Soupを使ってパースし、海賊事件として表示します。"
+
+# c98d6d94223847d5a844f7693f531a0b
+#: index.rst:202
+msgid "Parsing a Document"
+msgstr "ドキュメントをパースする"
+
+# b7216378825147998eb4b6de9c0547da
+#: index.rst:205
+msgid ""
+"A Beautiful Soup constructor takes an XML or HTML document in the form of a "
+"string (or an open file-like object). It parses the document and creates a "
+"corresponding data structure in memory."
+msgstr "Beautiful SoupコンストラクタはXMLかHTMLのドキュメントを文字列(あるいはファイル形式のオブジェクト)を引数にトリます。このコンストラクタはドキュメントをパースし、メモリ内に対応するデータ構造を作成します。"
+
+# 36a5083d14424c6ab4a2f225087221cf
+#: index.rst:207
+msgid ""
+"If you give Beautiful Soup a perfectly-formed document, the parsed data "
+"structure looks just like the original document. But if there's something "
+"wrong with the document, Beautiful Soup uses heuristics to figure out a "
+"reasonable structure for the data structure."
+msgstr "Beautiful Soupに完璧な形式のドキュメントを渡すと、パースされたデータ構造は元のドキュメントとほとんど同じようになります。しかし、もしドキュメントに間違いがあれば、Beautiful Soupは経験則的な方法を使って構造を理解し、データ構造を作成します。"
+
+# 46fb50eb3dea43fe881dc2b1c0ab3ecc
+#: index.rst:212
+msgid "Parsing HTML"
+msgstr "HTMLをパースする"
+
+# 29439c60b27843c5a64f08b57132abf7
+#: index.rst:214
+msgid ""
+"Use the ``BeautifulSoup`` class to parse an HTML document. Here are some of "
+"the things that ``BeautifulSoup`` knows:"
+msgstr "HTMLドキュメントをパースするには ``BeautifulSoup`` クラスを使います。以下に ``BeautifulSoup`` ができることをいくつか記します。"
+
+# ca7f27ae92c449d78139a66247db5ebc
+#: index.rst:217
+msgid "Some tags can be nested (<BLOCKQUOTE>) and some can't (<P>)."
+msgstr "いくつかのタグ(<BLOCKQUOTE>)は入れ子にすることができ、いくつか(<P>)はできません。"
+
+# 79f77fc2bac041468a16d1dceaf3f945
+#: index.rst:218
+msgid ""
+"Table and list tags have a natural nesting order. For instance, <TD> tags go "
+"inside <TR> tags, not the other way around."
+msgstr "Tableとlistタグは入れ子の順序は自然になります。例えば、<TD>タグは<TR>タグの中に入ります。その逆にはなりません。"
+
+# 24412f9e5a8d4401b087210b0198e92b
+#: index.rst:219
+msgid "The contents of a <SCRIPT> tag should not be parsed as HTML."
+msgstr "<SCRIPT>タグの中身はHTMLとしてパースされません。"
+
+# 1cc04cf2bfd940a1bcc9a40b674e8cd5
+#: index.rst:220
+msgid "A <META> tag may specify an encoding for the document."
+msgstr "<META>タグはドキュメントのエンコードを指定します。"
+
+# 375704390ccd4033b45e99e10ddffeb7
+#: index.rst:222
+msgid "Here it is in action"
+msgstr "実際の例です。"
+
+# 4fe55cc907f94e118a452cd132521dd4
+#: index.rst:246
+msgid ""
+"Note that ``BeautifulSoup`` figured out sensible places to put the closing "
+"tags, even though the original document lacked them."
+msgstr "``BeautifulSoup`` は元のドキュメントに閉じタグがない場合でも、可能なかぎり閉じタグを入れることに注意してください。"
+
+# 655ef89345e045b58561f7e19aec232b
+#: index.rst:249
+msgid ""
+"That document isn't valid HTML, but it's not too bad either. Here's a really "
+"horrible document. Among other problems, it's got a <FORM> tag that starts "
+"outside of a <TABLE> tag and ends inside the <TABLE> tag. (HTML like this "
+"was found on a website run by a major web company.)"
+msgstr "さっきのドキュメントは正しいHTMLではありませんが、そこまで悪くはありませんでした。こちらはとんでもないドキュメントです。他の問題もありますが、<FORM>タグが<TABLE>タグの外で始まっており、<TABLE>タグの中で終わっています。(このようなHTMLは有名なWebの会社で見つけられます)"
+
+# b2e7513b5be64efcb85744a40444bf8a
+#: index.rst:270
+msgid "Beautiful Soup handles this document as well:"
+msgstr "Beautiful Soupはこのドキュメントを上手く扱ってくれます。"
+
+# 6e585c54901e4ec38fd8a7b88ac316d0
+#: index.rst:298
+msgid ""
+"The last cell of the table is outside the <TABLE> tag; Beautiful Soup "
+"decided to close the <TABLE> tag when it closed the <FORM> tag. The author "
+"of the original document probably intended the <FORM> tag to extend to the "
+"end of the table, but Beautiful Soup has no way of knowing that. Even in a "
+"bizarre case like this, Beautiful Soup parses the invalid document and gives "
+"you access to all the data."
+msgstr "テーブルの最後のセルは<TABLE>タグの外にあります。Beautiful Soupは<FORM>タグが閉じられたら<TABLE>タグも閉じます。元のドキュメントの著者はたぶん<FORM>タグをテーブルの最後に拡張しようとしたのでしょう。しかし、Beautiful Soupはそんなことは知りません。こんな変な場合でも、Beautiful Soupは正しくないドキュメントをパースし、全てのデータを扱えます。"
+
+# 37f9eced8a7843208925c858d50bde2b
+#: index.rst:308
+msgid "Parsing XML"
+msgstr "XMLをパースする"
+
+# 40595035a5404861bf5591eb242b40ca
+#: index.rst:311
+msgid ""
+"The ``BeautifulSoup`` class is full of web-browser-like heuristics for "
+"divining the intent of HTML authors. But XML doesn't have a fixed tag set, "
+"so those heuristics don't apply. So ``BeautifulSoup`` doesn't do XML very "
+"well."
+msgstr "``BeautifulSoup`` クラスは経験則によって、Webブラウザと同じぐらいのHTMLを書いた人の意図を読み取る機能を備えています。しかし、XMLはタグの種類が固定されていないため、経験則は適用できません。つまり、 ``BeautifulSoup`` はXMLに対してはそれほど良くありません。"
+
+# 0c5bdbf355ee426c9cc7aff473d7b5f1
+#: index.rst:316
+msgid ""
+"Use the ``BeautifulStoneSoup`` class to parse XML documents. It's a general "
+"class with no special knowledge of any XML dialect and very simple rules "
+"about tag nesting: Here it is in action:"
+msgstr "XMLドキュメントをパースするには ``BeautifulStoneSoup`` クラスを使います。このクラスはXMLの方言に対する機能はない、タグの入れ子構造に対する単純なルールだけを持っています。例えばこんな感じです、"
+
+# 2c8cbcdf458e4b88955d58995c035bf7
+#: index.rst:341
+msgid ""
+"The most common shortcoming of ``BeautifulStoneSoup`` is that it doesn't "
+"know about self-closing tags. HTML has a fixed set of self-closing tags, but "
+"with XML it depends on what the DTD says. You can tell "
+"``BeautifulStoneSoup`` that certain tags are self-closing by passing in "
+"their names as the selfClosingTags argument to the constructor:"
+msgstr "``BeautifulStoneSoup`` の欠点は空要素タグ(例: <EXAMPLE />)について理解出来ないことです。HTMLは空要素ができるタグは固定されていますが、XMLはDTDになんと書かれているかに依存します。 自分で閉じるタグを ``selfClosingTags`` として ``BeautifulStoneSoup`` のコンストラクタに渡すと、 ``BeautifulStoneSoup`` は良いように取り計らってくれます。"
+
+# 3983ba6cbeff474baf8f5fc518ed918b
+#: index.rst:368
+msgid "If That Doesn't Work"
+msgstr "もし動かない場合"
+
+# 4bd820e790b34aa5acfe2d769c7d8a33
+#: index.rst:370
+msgid ""
+"There are several `other parser <http://www.crummy.com/software/"
+"BeautifulSoup/documentation.html#Other Built-In Parsers>`_ classes with "
+"different heuristics from these two. You can also `subclass <http://www."
+"crummy.com/software/BeautifulSoup/documentation.html#Customizing the "
+"Parser>`_ and customize a parser and give it your own heuristics."
+msgstr "以上の２つとは違う経験則を使う :ref:`他のパーサー <other_built_in_parsers>` がいくつかあります。また、 :ref:`サブクラスを作って <customizing_the_parser>` カスタマイズしたパーサを作り、そこに自分の経験則を入れ込むことも出来ます。"
+
+# be3546aa014145b89ea2d8ff64fdb6ea
+#: index.rst:373
+msgid "Beautiful Soup Gives You Unicode, Dammit"
+msgstr "Beautiful Soupはユニコード対応だぜこんちくしょう"
+
+# 60fc97eaa7454c5b9062677defeecf80
+#: index.rst:376
+msgid ""
+"By the time your document is parsed, it has been transformed into Unicode. "
+"Beautiful Soup stores only Unicode strings in its data structures."
+msgstr "ドキュメントがパースされたら、ユニコードに変換されます。Beautiful Soupのデータ構造の中にはユニコードだけが保存されます。"
+
+# 916f5f77598a4e338bf09da3e0784279
+#: index.rst:387
+msgid "Here's an example with a Japanese document encoded in UTF-8:"
+msgstr "UTF-8で書かれた日本語ドキュメントを使った例です。"
+
+# 0be0a5b4912a46b6ad5a09d7eaf45361
+#: index.rst:407
+msgid ""
+"Beautiful Soup uses a class called ``UnicodeDammit`` to detect the encodings "
+"of documents you give it and convert them to Unicode, no matter what. If you "
+"need to do this for other documents (without using Beautiful Soup to parse "
+"them), you can use ``UnicodeDammit`` by itself. It's heavily based on code "
+"from the `Universal Feed Parser <http://www.feedparser.org/>`_ ."
+msgstr "Beautiful Soupは ``UnicodeDammit`` と呼ばれるクラスを使って与えられたドキュメントのエンコーディングを調べ、元のエンコーディングがなにであろうともUnicodeに変換します。もし、(Beautiful Soupがパースしない)他のドキュメントが必要な場合、 ``UnicodeDammit`` を自分で使うこともできます。このクラスの大部分は、 `Universal Feed Parser <http://www.feedparser.org/>`_ に基づいています。"
+
+# 7c95f23249c04f03ae97d60d80c82bc9
+#: index.rst:409
+msgid ""
+"If you're running an older version of Python than 2.4, be sure to download "
+"and install `cjkcodecs and iconvcodec <http://cjkpython.i18n.org/>`_ , which "
+"make Python capable of supporting more codecs, especially CJK codecs. Also "
+"install the `chardet <http://chardet.feedparser.org/>`_  library, for better "
+"autodetection."
+msgstr "もしPython 2.4より古いバージョンを使っている場合、 `cjkcodecsとiconvcodec <http://cjkpython.i18n.org/>`_ をダウンロードしてインストールする必要があります。これにより、Pythonがより多くのエンコーディング、特にCJKを、扱えるようになります。また、自動検知が成功する確率を上げるために `chardet <http://chardet.feedparser.org/>`_  もしインストールするといいでしょう。"
+
+# 0244b6446d654143b88aad9eb5e2464c
+#: index.rst:411
+msgid ""
+"Beautiful Soup tries the following encodings, in order of priority, to turn "
+"your document into Unicode:"
+msgstr "Beautiful Soupは以下のエンコーディングをこの順番で試してUnicodeに変換します。"
+
+# d07235f22761478f8a57f33f3b3f5b41
+#: index.rst:413
+msgid ""
+"An encoding you pass in as the ``fromEncoding`` argument to the soup "
+"constructor."
+msgstr "``fromEncoding`` 引数としてsoupコンストラクタに渡したエンコーディング"
+
+# 0e882f16ba4d41b6b087460f4e8cf808
+#: index.rst:414
+msgid ""
+"An encoding discovered in the document itself: for instance, in an XML "
+"declaration or (for HTML documents) an ``http-equiv`` META tag. If Beautiful "
+"Soup finds this kind of encoding within the document, it parses the document "
+"again from the beginning and gives the new encoding a try. The only "
+"exception is if you explicitly specified an encoding, and that encoding "
+"actually worked: then it will ignore any encoding it finds in the document."
+msgstr "ドキュメント自身にあるエンコーディング。例えば、HTMLドキュメントの場合、XML宣言あるいは ``http-equiv`` METAタグです。もし、Beautiful Soupがこの種類のエンコーディングをドキュメントの中に見つけた場合、そのエンコーディングを使ってもう一度最初からドキュメントをパースしなおします。例外は、エンコーディングを明示的に指定し、そのエンコーディングが正しい場合です。この場合、ドキュメント中にあるエンコーディング指定は無視されます。"
+
+# d68afa7aa23449959125438f3574f3b8
+#: index.rst:415
+msgid ""
+"An encoding sniffed by looking at the first few bytes of the file. If an "
+"encoding is detected at this stage, it will be one of the UTF-* encodings, "
+"EBCDIC, or ASCII."
+msgstr "ファイルの最初の数バイトを調べて分かったエンコーディング。もしこのステージでエンコーディングが分かった場合、UTF-\\*か、EBCDICかASCIIのどれかです。"
+
+# be7bb02f87124c39b1f639f04baa5205
+#: index.rst:416
+msgid "An encoding sniffed by the chardet library, if you have it installed."
+msgstr "chardetライブラリがインストールされていれば、chardetが調べたエンコーディング"
+
+# caf21f4bd2e541b998223389380df054
+#: index.rst:417
+msgid "UTF-8"
+msgstr "UTF-8"
+
+# b697b87562e44775a0d7dcf7e3300a1e
+#: index.rst:418
+msgid "Windows-1252"
+msgstr "Windows-1252"
+
+# e7613867fcc14e5998633cd06839bb2a
+#: index.rst:420
+msgid ""
+"Beautiful Soup will almost always guess right if it can make a guess at all. "
+"But for documents with no declarations and in strange encodings, it will "
+"often not be able to guess. It will fall back to Windows-1252, which will "
+"probably be wrong. Here's an EUC-JP example where Beautiful Soup guesses the "
+"encoding wrong. (Again, because it uses EUC-JP, this example will only work "
+"if you are running Python 2.4 or have ``cjkcodecs`` installed):"
+msgstr "Beautiful Soupは推測できる場合はほとんどの場合正しく推測してくれます。しかし、宣言がなく変なエンコーディングな文章の場合、推測がほぼできません。この場合Windows-1252として扱いますが、だいたいにおいてこのエンコーディングは間違っています。ここにBeautiful Soupがエンコーディングを間違って推測してしまうEUC-JPの例を出します。(もう一度言うと、これはEUC-JPを使っているからで、この例はPython2.4か ``cjkcodecs`` をインストールしている時だけ起こります)"
+
+# 3e58657fc56842b2bde258e9eb4041d9
+#: index.rst:435
+msgid ""
+"But if you specify the encoding with ``fromEncoding`` , it parses the "
+"document correctly, and can convert it to UTF-8 or back to EUC-JP."
+msgstr "しかし、もし ``fromEncoding`` でエンコーディングを指定した場合、ドキュメントは正しくパースできるため、UTF-8に変換したりあるいはEUC-JPに戻したり出来ます。"
+
+# 371dab79d0b04907ba13d7cf551f5ceb
+#: index.rst:449
+msgid ""
+"If you give Beautiful Soup a document in the Windows-1252 encoding (or a "
+"similar encoding like ISO-8859-1 or ISO-8859-2), Beautiful Soup finds and "
+"destroys the document's smart quotes and other Windows-specific characters. "
+"Rather than transforming those characters into their Unicode equivalents, "
+"Beautiful Soup transforms them into HTML entities (``BeautifulSoup``) or XML "
+"entities (``BeautifulStoneSoup``)."
+msgstr "Windows-1252エンコーディングあるいはそれに似ているISO-8859-1やISO-8859-2を使っているドキュメントをBeautiful Soupに渡した場合、Beautiful Soupはドキュメントのsmart quotes(訳註:開きと閉じとで向きが異なるクオーテーション)や他のWindows独自の文字を探して消します。Beautiful Soupはこれらの文字を同じUnicode文字に変換するのではなく、HTMLエンティティ( ``BeautifulSoup`` の場合) か XMLエンティティ ( ``BeautifulStoneSoup`` の場合)に変換します。"
+
+# 33302265c31044b6b492be4cc965d75d
+#: index.rst:451
+msgid ""
+"To prevent this, you can pass ``smartQuotesTo=None`` into the soup "
+"constructor: then smart quotes will be converted to Unicode like any other "
+"native-encoding characters. You can also pass in \"xml\" or \"html\" for "
+"``smartQuotesTo``, to change the default behavior of ``BeautifulSoup`` and "
+"``BeautifulStoneSoup``."
+msgstr "これを避けるためには、 ``smartQuotesTo=None`` をsoupコンストラクタに渡します。この場合、 Smart quote は他の文字と同じくUnicodeに変換されます。 \"xml\" か \"html\" を ``smartQuotesTo`` に渡すと ``BeautifulSoup`` や ``BeautifulStoneSoup`` のデフォルトの挙動を変えられます。"
+
+# 59b2c765eb374fdcbeeefe1358dce961
+#: index.rst:472
+msgid "Printing a Document"
+msgstr "ドキュメントを表示する"
+
+# 0e63643e614a4885a4a15d4114a20d9b
+#: index.rst:474
+msgid ""
+"You can turn a Beautiful Soup document (or any subset of it) into a string "
+"with the ``str`` function, or the prettify or ``renderContents`` methods. "
+"You can also use the ``unicode`` function to get the whole document as a "
+"Unicode string."
+msgstr "Beautiful Soup(やそのサブセット)のドキュメントは ``str`` 関数を使うとstring文字列にできます。あるいは、 ``renderContents`` メソッドを使うともうちょっとかっこよく表示してくれます。また、 ``unicode`` 関数を使うとドキュメント全体をUnicode文字列にしてくれます。"
+
+# 4fb8587b4a3e44b2898ca9fbce4ef4de
+#: index.rst:476
+msgid ""
+"The ``prettify`` method adds strategic newlines and spacing to make the "
+"structure of the document obvious. It also strips out text nodes that "
+"contain only whitespace, which might change the meaning of an XML document. "
+"The ``str`` and ``unicode`` functions don't strip out text nodes that "
+"contain only whitespace, and they don't add any whitespace between nodes "
+"either."
+msgstr "``prettify`` メソッドは重要な改行と空白を入れてドキュメントを見やすくしてくれます。これはまた空白しかないテキストノードを削除してくれますが、これはXMLドキュメントを変更してしまうかもしれません。 ``str`` と ``unicode`` 関数は空白しかないテキストノードを削除しませんし、ノードの間に空白を挿入もしません。"
+
+# eada3cdcbd444ab2bb7a4cbd33a157fa
+#: index.rst:478
+msgid "Here's an example."
+msgstr "例です。"
+
+# 635da935f9564691991fba3a102b9524
+#: index.rst:508
+msgid ""
+"Note that ``str`` and ``renderContents`` give different results when used on "
+"a tag within the document. ``str`` prints a tag and its contents, and "
+"``renderContents`` only prints the contents."
+msgstr "ドキュメント中のタグを使った時、 ``str`` と ``renderContents`` では違う結果になることに注意してください。 ``str`` はタグとコンテンツを表示しますし、 ``renderContents`` はコンテンツだけを表示します。"
+
+# 079c2aca931242709e188f6bbf69a16b
+#: index.rst:519
+msgid ""
+"When you call ``__str__``, ``prettify``, or ``renderContents``, you can "
+"specify an output encoding. The default encoding (the one used by str) is "
+"UTF-8. Here's an example that parses an ISO-8851-1 string and then outputs "
+"the same string in different encodings:"
+msgstr "``__str__`` 、 ``prettify`` 、 ``renderContents`` を呼ぶ時にエンコーディングも選択できます。デフォルトのエンコーディングは(strで使われると同じく)UTF-8です。以下はISO-8859-1の文字列をパースして同じ文字列を違うエンコーディングで出力する例です。"
+
+# 6e5c782a538244a79f968df4744dc1a3
+#: index.rst:535
+msgid ""
+"If the original document contained an encoding declaration, then Beautiful "
+"Soup rewrites the declaration to mention the new encoding when it converts "
+"the document back to a string. This means that if you load an HTML document "
+"into ``BeautifulSoup`` and print it back out, not only should the HTML be "
+"cleaned up, but it should be transparently converted to UTF-8."
+msgstr "もし元のドキュメントにエンコーディングの宣言があった場合、Beautiful SoupはString文字列に変換する時に新しいエンコーディングで宣言を書き直します。これはつまり、もしHTMLドキュメントを ``BeautifulSoup`` に読み込ませ表示した場合、HTML的に綺麗になっていることに加えて、UTF-8に透過的に変換されているということです。"
+
+# 97f8e17687ac4839a6353b453c4eefa3
+#: index.rst:537
+msgid "Here's an HTML example:"
+msgstr "HTMLの例です。"
+
+# df9d2295db12422986ee4ef50c4bb06c
+#: index.rst:553
+msgid "Here's an XML example:"
+msgstr "XMLの例です。"
+
+# ddd4a601305a482eb7ce658e67a631a1
+#: index.rst:565
+msgid "The Parse Tree"
+msgstr "パースツリー"
+
+# 133da04af3434ca690a0c576ba0dd30e
+#: index.rst:567
+msgid ""
+"So far we've focused on loading documents and writing them back out. Most of "
+"the time, though, you're interested in the parse tree: the data structure "
+"Beautiful Soup builds as it parses the document."
+msgstr "今までのところはドキュメントを読み込んで書き戻すことに集中してきました。だけど、だいたいの場合、ツリーをパースすることに興味があるでしょう。ここでツリーとはBeautiful Soupがパースして作成するデータ構造のことです。"
+
+# 4e4167d544ed41c78f4873ecd2a56967
+#: index.rst:569
+msgid ""
+"A parser object (an instance of ``BeautifulSoup`` or ``BeautifulStoneSoup``) "
+"is a deeply-nested, well-connected data structure that corresponds to the "
+"structure of an XML or HTML document. The parser object contains two other "
+"types of objects: ``Tag`` objects, which correspond to tags like the <TITLE> "
+"tag and the <B> tags; and ``NavigableString`` objects, which correspond to "
+"strings like \"Page title\" and \"This is paragraph\"."
+msgstr "パーサーオブジェクト ( ``BeautifulSoup`` か ``BeautifulStoneSoup`` インスタンス)は深い入れ子構造で強く結びついたデータ構造がXMLやHTMLのドキュメントと対応しています。パーサーオブジェクトは２種類のオブジェクトを持っています。 <TITLE>タグや<B>タグに対応する ``Tag`` オブジェクトと、\"ページタイトル\"や\"このパラグラフ\"などの文字列に対応する ``NavigableString`` オブジェクトです。"
+
+# f9f159d7414949aeb939530fbdbeaa88
+#: index.rst:571
+msgid ""
+"There are also some subclasses of ``NavigableString`` (``CData``, "
+"``Comment``, ``Declaration``, and ``ProcessingInstruction``), which "
+"correspond to special XML constructs. They act like ``NavigableString``, "
+"except that when it's time to print them out they have some extra data "
+"attached to them. Here's a document that includes a comment:"
+msgstr "また、XML構造に対応する ``NavigableString`` のサブクラス(``CData`` ・ ``Comment`` ・ ``Declaration`` ・ ``ProcessingInstruction``)があります。これらは ``NavigableString`` と同じ振る舞いをしますが、表示する時にはデータを追加します。コメントを含んだドキュメントの例です。"
+
+# 091811cbf12d4f3288c52fee4bda8434
+#: index.rst:593
+msgid ""
+"Now, let's take a closer look at the document used at the beginning of the "
+"documentation:"
+msgstr "さて、文章の最初の部分で使われるドキュメントについてもうちょっと見てみましょう。"
+
+# 8013219a9f7b47c2871c6f0308b89e18
+#: index.rst:635
+msgid "The attributes of Tags"
+msgstr "タグの属性(アトリビュート)"
+
+# 41b36e6ef3d84f2ea7c22b472ee6e183
+#: index.rst:638
+msgid ""
+"``Tag`` and ``NavigableString`` objects have lots of useful members, most of "
+"which are covered in :ref:`Navigating the Parse Tree "
+"<navigating_the_parse_tree>` and :ref:`Searching the Parse Tree "
+"<searching_the_parse_tree>` . However, there's one aspect of ``Tag`` objects "
+"we'll cover here: the attributes."
+msgstr "``Tag`` と ``NavigableString`` オブジェクトは多くの有用なメンバーを持っています。その大部分は :ref:`パースツリーをナビゲートする <navigating_the_parse_tree>` と :ref:`パースツリーを検索する <searching_the_parse_tree>` で解説されています。しかし、 ``Tag`` オブジェクトについてここで解説したいことが一つだけあります。それは属性(アトリビュート)です。"
+
+# 1f56e2e21fc8483084078ab965c5e9c4
+#: index.rst:640
+msgid ""
+"SGML tags have attributes:. for instance, each of the <P> tags in the :ref:"
+"`example HTML above <attributes_of_tags_html_sample>` has an \"id\" "
+"attribute and an \"align\" attribute. You can access a tag's attributes by "
+"treating the ``Tag`` object as though it were a dictionary:"
+msgstr "SGMLタグは属性を持っています。例えば、 :ref:`上で出したHTMLの例 <attributes_of_tags_html_sample>` で、それぞれの<P>タグは \"id\"属性と\"align\"属性を持っています。このようなタグの属性に ``Tag`` オブジェクトを使って辞書形式でアクセスできます。"
+
+# 0d065b9c8b3a4484bb245098859d807b
+#: index.rst:653
+msgid ""
+"``NavigableString`` objects don't have attributes; only ``Tag`` objects have "
+"them."
+msgstr "``NavigableString`` オブジェクトは属性を持っていません。 ``Tag`` だけが属性を持っています。"
+
+# b154bb2790454e77ac0815850f266047
+#: index.rst:658
+msgid "Navigating the Parse Tree"
+msgstr "パースツリーをナビゲートする"
+
+# f3a0e79307d7405e880913a1d46d69ab
+#: index.rst:660
+msgid ""
+"All ``Tag`` objects have all of the members listed below (though the actual "
+"value of the member may be ``None``). ``NavigableString`` objects have all "
+"of them except for ``contents`` and ``string``."
+msgstr "全ての ``Tag`` オブジェクトは以下に示すメンバ変数を全て持っています(実際にはメンバー変数が ``None`` の場合があります)。  ``NavigableString`` オブジェクトは ``contents`` と ``string`` を除く全てのメンバ変数を持ちます。"
+
+# e425551d25514b2a8813e1aa9aa31e51
+#: index.rst:665
+msgid "parent"
+msgstr "parent"
+
+# 42fca8ed413c41ffba5e8b30a4322ea5
+#: index.rst:667
+msgid ""
+"In :ref:`the example above <attributes_of_tags_html_sample>`, the parent of "
+"the <HEAD> ``Tag`` is the <HTML> ``Tag``. The parent of the <HTML> ``Tag`` "
+"is the ``BeautifulSoup`` parser object itself. The parent of the parser "
+"object is ``None``. By following ``parent``, you can move up the parse tree:"
+msgstr ":ref:`上の例 <attributes_of_tags_html_sample>` では<HEAD> ``Tag`` の親は <HTML> ``Tag`` でした。 <HTML> ``Tag`` の親は ``BeautifulSoup`` パーサー自身です。パーサーオブジェクトの親は ``None`` です。 ``parent`` をたどることで、パースツリーを上に登って行けます。"
+
+# bde26413a90c41e3aa24e523c28e6aa5
+#: index.rst:679
+msgid "contents"
+msgstr "コンテンツ(contents)"
+
+# 19ea2bda00ed4ded9ec7c2504126f4c0
+#: index.rst:681
+msgid ""
+"With parent you move up the parse tree. With ``contents`` you move down the "
+"tree. ``contents`` is an ordered list of the ``Tag`` and ``NavigableString`` "
+"objects contained within a page element. Only the top-level parser object "
+"and ``Tag`` objects have ``contents``. ``NavigableString`` objects are just "
+"strings and can't contain sub-elements, so they don't have ``contents``."
+msgstr "parentを使うとパースツリーを上に登れます。 ``contents`` を使うと、ツリーを下に下れます。 ``contents`` はページエレメントに含まれている ``Tag`` と ``NavigableString`` オブジェクトの順序保持リスト(ordered list)です。トップレベルのパーサーオブジェクトと ``Tag`` オブジェクトだけが ``contents`` を持っています。 ``NavigableString`` オブジェクトは文字列(strings)だけを持っており、サブエレメントを持っていません。従って ``contents`` も持っていません。"
+
+# 13af4ba3fcb84ccf9f65dce23202e434
+#: index.rst:683
+msgid ""
+"In :ref:`the example above <attributes_of_tags_html_sample>`, the contents "
+"of the first <P> ``Tag`` is a list containing a ``NavigableString`` (\"This "
+"is paragraph \"), a <B> ``Tag``, and another ``NavigableString`` (\".\"). "
+"The contents of the <B> ``Tag``: a list containing a ``NavigableString`` "
+"(\"one\")."
+msgstr ":ref:`上の例 <attributes_of_tags_html_sample>` では、最初の<P> ``Tag`` のコンテンツは ``NavigableString`` (\"This is paragraph \")と <B> ``Tag`` 、そして別の ``NavigableString`` (\".\")を含んだリストです。<B> ``Tag`` のコンテンツは ``NavigableString`` (\"one\")を含んだリストです。"
+
+# 409dbf2adb74487288d44862e2dce5b6
+#: index.rst:696
+msgid "string"
+msgstr "string"
+
+# deb8c84a1597461daaa29ead5d8263fa
+#: index.rst:698
+msgid ""
+"For your convenience, if a tag has only one child node, and that child node "
+"is a string, the child node is made available as ``tag.string``, as well as "
+"``tag.contents[0]``. In :ref:`the example above "
+"<attributes_of_tags_html_sample>`, ``soup.b.string`` is a "
+"``NavigableString`` representing the Unicode string \"one\". That's the "
+"string contained in the first <B> ``Tag`` in the parse tree."
+msgstr "もしタグが１つだけしか子ノードを持っていなく、その子ノードが文字列だったら、その子ノードは ``tag.string`` として参照できますし、 ``tag.contents[0]`` としても参照できます。 :ref:`上の例 <attributes_of_tags_html_sample>` では、 ``soup.b.string`` は ``NavigableString`` はUnicodeの\"one\"を表しています。これはパースツリー上の最初の<B> ``Tag`` の文字列のことを指しています。"
+
+# 396e6b7fb03f455aab73d67127596b9d
+#: index.rst:707
+msgid ""
+"But soup.p.string is ``None``, because the first <P> ``Tag`` in the parse "
+"tree has more than one child. ``soup.head.string`` is also ``None``, even "
+"though the <HEAD> ``Tag`` has only one child, because that child is a "
+"``Tag`` (the <TITLE> Tag), not a ``NavigableString``."
+msgstr "しかし、 ``soup.p.string`` は ``None`` です。なぜなら、パースツリーの最初の<P> ``Tag`` は一つ以上の子ノードを持っているからです。<HEAD> ``Tag`` は一つだけしか子ノードを持っていないにも関わらず、 ``soup.head.string`` も ``None`` です。なぜならこの子ノードは ``Tag`` (<TITLE> Tag) であり、 ``NavigableString`` ではないからです。"
+
+# b62bf7938195484991fe007104fa57ae
+#: index.rst:717
+msgid "nextSibling and previousSibling"
+msgstr "nextSibling と previousSibling"
+
+# 19504b3661fa4a13b55185fa7b823c36
+#: index.rst:719
+msgid ""
+"These members let you skip to the next or previous thing on the same level "
+"of the parse tree. In the document above, the ``nextSibling`` of the <HEAD> "
+"``Tag`` is the <BODY> ``Tag``, because the <BODY> ``Tag`` is the next thing "
+"directly beneath the <html> Tag. The ``nextSibling`` of the <BODY> tag is "
+"``None``, because there's nothing else directly beneath the <HTML> Tag."
+msgstr "このメンバ変数はパースツリーの中で次のあるいは前の同じレベルのものまで飛ばします。上記のように、 <HEAD> ``Tag`` の ``nextSibling`` は <BODY> ``Tag`` です。なぜなら<BODY> ``Tag`` は<html>タグのすぐ下だからです。<BODY> ``Tag`` の ``nextSibling`` は ``None`` です。なぜなら、<HTML>タグのすぐ次はなにもないからです。"
+
+# bb65def585714c048b935277e1b4da97
+#: index.rst:728
+msgid ""
+"Conversely, the ``previousSibling`` of the <BODY> Tag is the <HEAD> tag, and "
+"the ``previousSibling`` of the <HEAD> ``Tag`` is ``None``:"
+msgstr "逆に言えば、 <BODY> ``Tag`` の ``previousSibling`` は<HEAD> ``Tag`` で、<HEAD> ``Tag`` の ``previousSibling`` は ``None`` です。"
+
+# 61669f5ef6b2459c9899646dfb391691
+#: index.rst:737
+msgid ""
+"Some more examples: the ``nextSibling`` of the first <P> ``Tag`` is the "
+"second <P> Tag. The ``previousSibling`` of the <B> ``Tag`` inside the second "
+"<P> ``Tag`` is the ``NavigableString`` \"This is paragraph\". The "
+"``previousSibling`` of that ``NavigableString`` is ``None``, not anything "
+"inside the first <P> Tag."
+msgstr "もうちょっと例を出します。 最初の<P> ``Tag`` の ``nextSibling`` は二番目の<P> ``Tag`` です。二番目の<P> ``Tag`` の中にある<B> ``Tag`` の ``previousSibling`` は ``NavigableString`` の \"This is paragraph\" です。この ``NavigableString`` の ``previousSibling`` は ``None`` で、最初の<P> ``Tag`` の中には他になにもありません。"
+
+# 44b86cc7973348caaa9c9ef40b6045d0
+#: index.rst:751
+msgid "next and previous"
+msgstr "next と previous"
+
+# 35774a054617434488c55ea0fed5d6fd
+#: index.rst:753
+msgid ""
+"These members let you move through the document elements in the order they "
+"were processed by the parser, rather than in the order they appear in the "
+"tree. For instance, the ``next`` of the <HEAD> ``Tag`` is the <TITLE> Tag, "
+"not the <BODY> Tag. This is because, in the original document, the <TITLE> "
+"tag comes immediately after the <HEAD> tag."
+msgstr "これらのメンバ変数はパーサーが処理したのと同じ順序でドキュメントのエレメントを扱います。ツリーの中で出てきた順序ではありません。例えば、 <HEAD> ``Tag`` の ``next`` は、<BODY> ``Tag`` ではありません。なぜなら、元のドキュメントでは、<TITLE>タグは<HEAD>タグの直後にあるからです。"
+
+# 55e16c8585964fa2bc69a57144ba1125
+#: index.rst:764
+msgid ""
+"Where next and ``previous`` are concerned, a Tag's ``contents`` come before "
+"its ``nextSibling``. You usually won't have to use these members, but "
+"sometimes it's the easiest way to get to something buried inside the parse "
+"tree."
+msgstr "``next`` と ``previous`` が関係する場所として、 ``Tag`` の ``contents`` は ``nextSibling`` の前に来ます。おそらく通常はこれらのメンバ変数を使わないでしょうがこれはパースツリーの中を掘り返す時に一番楽な方法なのです。"
+
+# 6802ea55574146a1a2ffbd5732970441
+#: index.rst:767
+msgid "Iterating over a Tag"
+msgstr "Tagのイテレータ"
+
+# c0284363b45f427a910efcc8b19c1e4f
+#: index.rst:769
+msgid ""
+"You can iterate over the contents of a ``Tag`` by treating it as a list. "
+"This is a useful shortcut. Similarly, to see how many child nodes a ``Tag`` "
+"has, you can call ``len(tag)`` instead of ``len(tag.contents)``. In terms of "
+"the document above:"
+msgstr "``Tag`` をリストとして扱うことでイテレータとして順々に処理できます。これは便利です。同じように、 ``Tag`` が何個子ノードを持っているかを数えたいとき、 ``len(tag.contents)`` の代わりに、 ``len(tag)`` とできます。上記のドキュメントでの例です。"
+
+# e4b9ccdc750641c2803a714310138d03
+#: index.rst:784
+msgid "Using tag names as members"
+msgstr "タグ名をメンバ変数として扱う"
+
+# 3c8edeca0c6e48418bb6ddb439b5db8b
+#: index.rst:786
+msgid ""
+"It's easy to navigate the parse tree by acting as though the name of the tag "
+"you want is a member of a parser or ``Tag`` object. We've been doing it "
+"throughout these examples. In terms of the document above, ``soup.head`` "
+"gives us the first (and, as it happens, only) <HEAD> ``Tag`` in the document:"
+msgstr "パースツリーをナビゲートする方法は簡単です。欲しいタグの名前をパーサーのメンバ変数か ``Tag`` オブジェクトを使えばいいのです。上記の例では、 ``soup.head`` は最初の(そして唯一の)<HEAD>タグを返します。"
+
+# 6a714a1ad8394f7488f4a7d557631382
+#: index.rst:793
+msgid ""
+"In general, calling ``mytag``.foo returns the first child of mytag that "
+"happens to be a <FOO> ``Tag``. If there aren't any <FOO> Tags beneath "
+"``mytag``, then ``mytag.foo`` returns ``None``. You can use this to traverse "
+"the parse tree very quickly:"
+msgstr "一般的に ``mytag`` .foo を呼ぶと、mytagの最初の子ノード、<FOO> ``Tag`` を返します。もし ``mytag`` の直下に<FOO>タグがなかった場合、 ``mytag.foo`` は ``None`` を返します。これにより、パースツリーを渡っていくのが簡単になります。"
+
+# b7424afeb1a5474585bbf7e49a92158a
+#: index.rst:803
+msgid ""
+"You can also use this to quickly jump to a certain part of a parse tree. For "
+"instance, if you're not worried about <TITLE> tags in weird places outside "
+"of the <HEAD> tag, you can just use ``soup.title`` to get an HTML document's "
+"title. You don't have to use ``soup.head.title``:"
+msgstr "パースツリーの適切な場所にジャンプすることもできます。例えば、<HEAD>タグの外の変な場所にある<TITLE>タグを気にしない場合、 ``soup.title`` と打つだけで、HTMLドキュメントのタイトルを得られます。 ``soup.head.title`` と打つ必要はありません。"
+
+# 438183f6350f4c42a4945f70ef49c483
+#: index.rst:810
+msgid ""
+"``soup.p`` jumps to the first <P> tag inside a document, wherever it is. "
+"``soup.table.tr.td`` jumps to the first column of the first row of the first "
+"table in the document."
+msgstr "``soup.p`` はドキュメント中の最初の<P>タグにジャンプします。それがどこにあろうとも、です。 ``soup.table.tr.td`` はドキュメント中の最初のテーブルの最初の列にジャンプします。"
+
+# 293029a4db46417f83de20d274f54fd7
+#: index.rst:812
+msgid ""
+"These members actually alias to the ``first`` method, covered below. I "
+"mention it here because the alias makes it very easy to zoom in on an "
+"interesting part of a well-known parse tree."
+msgstr "これらのメンバ変数は実際はあとで述べる ``first`` メソッドの別の名前(alias)です。私はパースツリーの面白いところをすぐに触れられるように、ここでこの別名について述べました。"
+
+# 9f175cc9f57b44758296e0082697ae55
+#: index.rst:814
+msgid ""
+"An alternate form of this idiom lets you access the first <FOO> tag as ``."
+"fooTag`` instead of ``.foo``. For instance, ``soup.table.tr.td`` could also "
+"be expressed as ``soup.tableTag.trTag.tdTag``, or even ``soup.tableTag.tr."
+"tdTag``. This is useful if you like to be more explicit about what you're "
+"doing, or if you're parsing XML whose tag names conflict with the names of "
+"Beautiful Soup methods and members."
+msgstr "ドキュメント中の最初の<FOO>タグを得る別の方法は、 ``.foo`` ではなく ``fooTag`` を使う方法です。例えば、 ``soup.table.tr.td`` は ``soup.tableTag.trTag.tdTag`` や ``soup.tableTag.tr.tdTag`` とも書けます。これはあなたがなにをしているのかを明確に記す時に便利です。あるいは、Beautiful Soupが持つメソッド名やメンバ変数名とXMLのタグとがぶつかっている時に便利です。"
+
+# 1dc146a8b7334049ad83b1efe5ab8d49
+#: index.rst:827
+msgid ""
+"If you're looking for tag names that aren't valid Python identifiers (like "
+"``hyphenated-name``), you need to use ``find``."
+msgstr "Pythonの正しい名前(``hyphenated-name`` など)とは異なるタグを探したい場合、 ``find`` を使う必要があります。"
+
+# f2876411f3c44e0cac74a917c1140f0e
+#: index.rst:832
+msgid "Searching the Parse Tree"
+msgstr "パースツリーを検索する"
+
+# 457b1a70ffe44b3fbe3a5ecf24c24b30
+#: index.rst:834
+msgid ""
+"Beautiful Soup provides many methods that traverse the parse tree, gathering "
+"Tags and ``NavigableString``  that match criteria you specify."
+msgstr "Beautiful Soupはパースツリーを渡り、指定とマッチする ``Tag`` と ``NavigableString`` を集めるたくさんのメソッドを提供しています。"
+
+# 288a88683cc0472880ac27cb62317a51
+#: index.rst:836
+msgid ""
+"There are several ways to define criteria for matching Beautiful Soup "
+"objects. Let's demonstrate by examining in depth the most basic of all "
+"Beautiful Soup search methods, ``findAll``. As before, we'll demonstrate on "
+"the following document:"
+msgstr "Beautiful Soupのオブジェクトとマッチする基準を定義する方法は幾つかあります。Beautiful Soupが持つ全ての検索メソッドの基盤となる ``findAll`` から説明します。その前に、以下のドキュメントでデモします。"
+
+# 02759d2fdded47a59f04402cf861c68a
+#: index.rst:873
+msgid ""
+"Incidentally, the two methods described in this section (``findAll`` and "
+"``find``) are available only to ``Tag`` objects and the top-level parser "
+"objects, not to ``NavigableString`` objects. The methods defined in "
+"Searching Within the Parse Tree are also available to ``NavigableString`` "
+"objects."
+msgstr "ついでながら、この章で説明する２つのメソッド (``findAll`` と ``find``)は ``Tag`` オブジェクトとトップレベルパーサーにだけ作用し、 ``NavigableString`` には使えません。(訳註: そうなの？) :ref:`パースツリーの中を検索する <searching_within_the_parse_tree>` で定義するメソッドは ``NavigableString`` オブジェクトにも使えます。"
+
+# ed3f84d471f947d7b65245932534fdc0
+#: index.rst:877
+msgid ""
+"The basic find method: findAll(name, attrs, recursive, text, limit, \\*"
+"\\*kwargs)"
+msgstr "基本の検索メソッド: findAll(name, attrs, recursive, text, limit, \\*\\*kwargs)"
+
+# f58d0691fe424f1dae14989f7e8dd840
+#: index.rst:879
+msgid ""
+"The ``findAll`` method traverses the tree, starting at the given point, and "
+"finds all the ``Tag`` and ``NavigableString`` objects that match the "
+"criteria you give. The signature for the ``findAll`` method is this:"
+msgstr "``findAll`` メソッドは与えられた場所からツリーを渡り始めます。そして、全ての適合する ``Tag`` と ``NavigableString`` を見つけます。 ``findAll`` メソッドのシグニチャはこの通りです。"
+
+# 7b82038f96ce45c7abac69ec38e38cd7
+#: index.rst:884
+msgid ""
+"findAll(name=None, attrs={}, recursive=True, text=None, limit=None, \\*"
+"\\*kwargs)"
+msgstr "findAll(name=None, attrs={}, recursive=True, text=None, limit=None, \\*\\*kwargs)"
+
+# edf1eb13f76543d3bc12b60640f1b1d7
+#: index.rst:886
+msgid ""
+"These arguments show up over and over again throughout the Beautiful Soup "
+"API. The most important arguments are ``name`` and the keyword arguments."
+msgstr "これらの引数はBeautiful SoupのAPIの中で何度も何度も出てきます。この中で最も重要なのは ``name`` とキーワード引数です。"
+
+# f9e2b4a3d8c946e29adabd195eacd073
+#: index.rst:888
+msgid ""
+"The name argument restricts the set of tags by name. There are several ways "
+"to restrict the name, and these too show up over and over again throughout "
+"the Beautiful Soup API."
+msgstr "name引数はタグをnameで制限します。nameを制限する方法はいくつかあり、それらはBeautiful SoupのAPIで何度も出てきます。"
+
+# ecfa1c286ffb41078b6db1ff0d10fc8f
+#: index.rst:890
+msgid ""
+"The simplest usage is to just pass in a tag name. This code finds all the "
+"<B> Tags in the document:"
+msgstr "一番簡単な使用法は、タグの名前を渡すことです。このコードはドキュメント中の全ての<B>タグを見つけます。"
+
+# d33e37a27c3d4df096227a33a4f583f5
+#: index.rst:897
+msgid ""
+"You can also pass in a regular expression. This code finds all the tags "
+"whose names start with B:"
+msgstr "正規表現を渡すことも出来ます。このコードはBで始まる名前のタグを全て見つけてきます。"
+
+# ac52decd55674b398e7a45767ae4a12d
+#: index.rst:906
+msgid ""
+"You can pass in a list or a dictionary. These two calls find all the <TITLE> "
+"and all the <P> tags. They work the same way, but the second call runs "
+"faster:"
+msgstr "リストや辞書で渡すことも出来ます。この２つの呼び出しは全ての<TITLE>と<P>タグを見つけてきます。この２つは同じ動きをしますが、二番目のほうが速いです。"
+
+# 1e44187fa0134e96b9b943b10a53729b
+#: index.rst:920
+msgid ""
+"You can pass in the special value ``True``, which matches every tag with a "
+"name: that is, it matches every tag."
+msgstr "特別な値の ``True`` を渡すことも出来ます。これは名前を持つ全てのタグにマッチします。つまり、全てのタグです。"
+
+# af1b67c855474e74969a6a94ab05a0f6
+#: index.rst:928
+msgid ""
+"This doesn't look useful, but True is very useful when restricting attribute "
+"values."
+msgstr "これは一見便利なようには見えませんが、属性値で絞る時に役に立ちます。"
+
+# c78ea6c9ac90465c8ea4420c8f01a6b4
+#: index.rst:932
+msgid ""
+"You can pass in a callable object which takes a ``Tag`` object as its only "
+"argument, and returns a boolean. Every ``Tag`` object that findAll "
+"encounters will be passed into this object, and if the call returns ``True`` "
+"then the tag is considered to match."
+msgstr "``Tag`` オブジェクトだけを引数に取り、真偽値だけを返す、呼び出し可能なオブジェクトを渡すこともできます。findAllが見つけた全ての ``Tag`` オブジェクトがこの呼出可能オブジェクトに渡され、もし、その呼出が ``True`` を返したらマッチしたとみなします。"
+
+# 56ca882f381642b4bffea1f1edeb00c5
+#: index.rst:934
+msgid "This code finds the tags that have two, and only two, attributes:"
+msgstr "このコードは属性を２つ持つタグだけを探してきます。"
+
+# 5f2533d2817f448cbdc70392395d2926
+#: index.rst:942
+msgid ""
+"This code finds the tags that have one-character names and no attributes:"
+msgstr "このコードは一文字の名前、かつ、属性を持たないタグを探してきます。"
+
+# c62796189bb545f284a25321aaa44adf
+#: index.rst:949
+msgid ""
+"The keyword arguments impose restrictions on the attributes of a tag. This "
+"simple example finds all the tags which have a value of \"center\" for their "
+"\"align\" attribute:"
+msgstr "キーワード引数はタグの属性を制限します。この簡単な例では、\"aligin\"属性が\"center\"なタグを全て見つけます。"
+
+# b252c99d0ed848f68bbc2f550e856ff1
+#: index.rst:956
+msgid ""
+"As with the name argument, you can pass a keyword argument different kinds "
+"of object to impose different restrictions on the corresponding attribute. "
+"You can pass a string, as seen above, to restrict an attribute to a single "
+"value. You can also pass a regular expression, a list, a hash, the special "
+"values ``True`` or ``None``, or a callable that takes the attribute value as "
+"its argument (note that the value may be ``None``). Some examples:"
+msgstr "name引数と同じように、キーワード引数には対応する属性に対して別々の制限をそれぞれつけられます。文字列を渡すことも出来ますし、一つの値だけに制限することもできます。正規表現、リスト、辞書、 ``True`` 、 ``None`` 、属性値を引数に渡す呼び出し可能オブジェクト(属性値は ``None`` の時があることに注意してください)、全て渡せます。例を見てください。"
+
+# d603014fa8ad421f9f0ee26a47be5478
+#: index.rst:971
+msgid ""
+"The special values ``True`` and ``None`` are of special interest. ``True`` "
+"matches a tag that has any value for the given attribute, and ``None`` "
+"matches a tag that has no value for the given attribute. Some examples:"
+msgstr "``True`` と ``None`` は特別な値です。 ``True`` は与えた属性のどんな値を持つタグにもマッチしますし、 ``None`` は与えた属性のうち値を持たないタグにマッチします。例を見てください。"
+
+# fe79208fcdd14798b1fb811a0c1262c0
+#: index.rst:982
+msgid ""
+"If you need to impose complex or interlocking restrictions on a tag's "
+"attributes, pass in a callable object for ``name``, :ref:`as seen above "
+"<you_can_pass_in_a_callable>`, and deal with the ``Tag`` object."
+msgstr "もし、タグの属性に複雑な、あるいは組み合わせの制限を行いたいのならば、 :ref:`上に書かれている <you_can_pass_in_a_callable>` ように ``name`` に呼出可能オブジェクトを渡し、 ``Tag`` オブジェクトを処理してください。"
+
+# 2065b9c7bc5345eda357a0ad2a24b01c
+#: index.rst:984
+msgid ""
+"You might have noticed a problem here. What if you have a document with a "
+"tag that defines an attribute called ``name``? You can't use a keyword "
+"argument called ``name`` because the Beautiful Soup search methods already "
+"define a ``name`` argument. You also can't use a Python reserved word like "
+"for as a keyword argument."
+msgstr "ここで問題があることに気がつくかもしれません。もし、 ``name`` という属性を定義したタグがあった場合にどうなるでしょう。 ``name`` という名前を持つキーワード引数を使うことは出来ません。なぜなら Beautiful Soupの検索用メソッドがすでに ``name`` 引数を定義しているからです。他にも、Pythonの予約後はキーワード引数として使えません。"
+
+# b11e5a72104c461193465a32fb507c95
+#: index.rst:986
+msgid ""
+"Beautiful Soup provides a special argument called ``attrs`` which you can "
+"use in these situations. ``attrs`` is a dictionary that acts just like the "
+"keyword arguments:"
+msgstr "Beautiful Soupはこういう場合に使える ``attr`` という特別な引数を用意しています。 ``attrs`` はキーワード引数と同じように辞書型として振る舞います。"
+
+# 6579b46dc3e64329af97547cf8a02eea
+#: index.rst:998
+msgid ""
+"You can use ``attrs`` if you need to put restrictions on attributes whose "
+"names are Python reserved words, like ``class``, for, or ``import``; or "
+"attributes whose names are non-keyword arguments to the Beautiful Soup "
+"search methods: ``name``, ``recursive``, ``limit``, ``text``, or ``attrs`` "
+"itself."
+msgstr "``class`` ・ ``for`` ・ ``import`` などのPythonの予約語、あるいは、 ``name`` ・ ``recursive`` ・ ``limit`` ・ ``text`` ・ ``attrs`` など、Beautiful Soupで使っているメソッドを名前として持つ属性を検索の条件としたい時に ``attr`` を使えます。"
+
+# 3ba06fb8a484417db066f181f02573d0
+#: index.rst:1013
+msgid "Searching by CSS class"
+msgstr "CSSクラスで検索する"
+
+# 619b6753777f43dd9b9c17b0e8104edf
+#: index.rst:1015
+msgid ""
+"The ``attrs`` argument would be a pretty obscure feature were it not for one "
+"thing: CSS. It's very useful to search for a tag that has a certain CSS "
+"class, but the name of the CSS attribute, ``class``, is also a Python "
+"reserved word."
+msgstr "``attr`` 引数はちょっと分かりにくい機能ですが、あるCSSのクラスを持つタグを検索するのに使います。 CSSの属性は ``class`` というPythonの予約語と同じ名前を使っているため、そのままでは検索できないからです。"
+
+# a90b33caecf64b7781c1399758440a3f
+#: index.rst:1017
+msgid ""
+"You could search by CSS class with ``soup.find``(\"tagName\", { \"class\" : "
+"\"cssClass\" }), but that's a lot of code for such a common operation. "
+"Instead, you can pass a string for ``attrs`` instead of a dictionary. The "
+"string will be used to restrict the CSS class."
+msgstr "CSSクラスを ``soup.find`` (\"tagName\", { \"class\" : \"cssClass\" } として検索できます。こんな良くある操作ではいろいろなコードが考えられます。例えば、辞書型の代わりに文字列を ``attrs`` に渡しても動作します。この文字列はCSSクラスを検索するために使われます。"
+
+# 66da3b770de84402a56d9800cf844f3b
+#: index.rst:1031
+msgid ""
+"**text** is an argument that lets you search for ``NavigableString`` objects "
+"instead of Tags. Its value can be a string, a regular expression, a list or "
+"dictionary, ``True`` or ``None``, or a callable that takes a "
+"``NavigableString`` object as its argument:"
+msgstr "**text** は ``Tag`` の代わりに ``NavigableString`` オブジェクトを検索するためのヒキスです。この値には文字列、正規表現、辞書型のリスト、 ``True`` 、 ``None`` 、 ``NavigableString`` オブジェクトを引数に取る呼び出し可能オブジェクトが使えます。"
+
+# a1ba189977b2450c82bf983ac54e52a5
+#: index.rst:1055
+msgid ""
+"**recursive** is a boolean argument (defaulting to ``True``) which tells "
+"Beautiful Soup whether to go all the way down the parse tree, or whether to "
+"only look at the immediate children of the ``Tag`` or the parser object. "
+"Here's the difference:"
+msgstr "**recursive** は真偽値(デフォルトは ``True``)の引数です。これは Beautiful Soupがパースツリーを全てたどるか、 ``Tag`` あるいはパーサーオブジェクトの直下の子供だけを見るかを指定します。この差を以下の例で示します。"
+
+# 52dd198f3f6449b4bc0cbdd26507938b
+#: index.rst:1065
+msgid ""
+"When ``recursive`` is false, only the immediate children of the <HTML> tag "
+"are searched. If you know that's all you need to search, you can save some "
+"time this way."
+msgstr "``recursive`` が ``False`` の時、<HTML>タグ直下の子供しか検索しません。直下だけを探せばいい時にこれを使うと、時間を短縮できます。"
+
+# 53b4955512414097a770573558cb0027
+#: index.rst:1067
+msgid ""
+"Setting **limit** argument lets you stop the search once Beautiful Soup "
+"finds a certain number of matches. If there are a thousand tables in your "
+"document, but you only need the fourth one, pass in 4 to ``limit`` and "
+"you'll save time. By default, there is no limit."
+msgstr "**limit** 引数を設定すると、検索の数を制限できます。もしドキュメントに1000個のテーブルがあり、その4番目のテーブルだけ必要な場合、 ``limit`` に4を入れれば時間を短縮できます。デフォルトでは制限はありません。"
+
+# 1e285c587367438daeadf004a5048791
+#: index.rst:1079
+msgid "Calling a tag is like calling findall"
+msgstr "findAllを呼び出すのと同じようにタグを呼び出す"
+
+# 0f2969664bbc40cea7deb6f712a7ff84
+#: index.rst:1081
+msgid ""
+"A little shortcut for you. If you call the parser object or a ``Tag`` like a "
+"function, then you can pass in all of findall's arguments and it's the same "
+"as calling ``findall``. In terms of :ref:`the document above "
+"<there_are_several_ways>`:"
+msgstr "ちょっとしたショートカットがありますよ。パーサーオブジェクトか ``Tag`` を関数のように呼び出し、findAllと同じ引数を与えたら、それは ``findAll`` の呼び出しになります。 :ref:`上記の例 <there_are_several_ways>` 。"
+
+# 26e56bbaaac74437a244d7bbb225d438
+#: index.rst:1092
+msgid "find(name, attrs, recursive, text, \\*\\*kwargs)"
+msgstr "find(name, attrs, recursive, text, \\*\\*kwargs)"
+
+# b6a2e5909b84407d923f890d2ed47319
+#: index.rst:1094
+msgid ""
+"Okay, now let's look at the other search methods. They all take pretty much "
+"the same arguments as ``findAll``."
+msgstr "OK。他の検索メソッドを見ていきましょう。これらはほとんど ``findAll`` と同じ引数を取ります。"
+
+# b76afe97218e4a10af894850756566c4
+#: index.rst:1096
+msgid ""
+"The ``find`` method is almost exactly like ``findAll``, except that instead "
+"of finding all the matching objects, it only finds the first one. It's like "
+"imposing a ``limit`` of 1 on the result set, and then extracting the single "
+"result from the array. In terms of :ref:`document above "
+"<there_are_several_ways>`:"
+msgstr "``find`` メソッドは ``findAll`` とほぼ同じですが、適合する全てのオブジェクトを返すのではなく、 ``find`` は見つけた最初のオブジェクトだけを返します。これは ``limit`` に1を与えて、返り値の配列を取り出した結果に似ています。 :ref:`上記のドキュメントでの例 <there_are_several_ways>`:"
+
+# 98adbbadd5e443b5ae345f3371069b1d
+#: index.rst:1109
+msgid ""
+"In general, when you see a search method with a plural name (like "
+"``findAll`` or ``findNextSiblings``), that method takes a limit argument and "
+"returns a list of results. When you see a search method that doesn't have a "
+"plural name (like ``find`` or ``findNextSibling``), you know that the method "
+"doesn't take a limit and returns a single result."
+msgstr "一般的に複数形の名前(``findAll`` や ``findNextSiblings``) を持つ検索メソッドは、 ``limit`` 引数を取り、返り値は配列です。複数形でない名前(``find`` や ``findNextSibling``)は、limitを取らず、単一の結果を返します。"
+
+# 062336ea3f5b4fb88a44914cede13ca2
+#: index.rst:1112
+msgid "What happened to first?"
+msgstr "firstに何が起きたの？"
+
+# 513950b40d44474a9efe341f20475f10
+#: index.rst:1114
+msgid ""
+"Previous versions of Beautiful Soup had methods like ``first``, ``fetch``, "
+"and ``fetchPrevious``. These methods are sitll there, but they're "
+"deprecated, and may go away soon. The total effect of all those names was "
+"very confusing. The new names are named consistently: as mentioned above, if "
+"the method name is plural or refers to All, it returns multiple objects. "
+"Otherwise, it returns one object."
+msgstr "Beautiful Soupの以前のバージョンでは、 ``first`` 、 ``fetch`` 、 ``fetchPrevious`` というメソッドがありました。これらのメソッドはまだありますが、deprecated(廃止予定)で、近いうちになくなります。これらの名前のメソッドが持つ効果はとても混乱します。新しい名前は名前に一貫性があります。上記で述べたように、メソッド名が複数形あるいはAllがついている場合、複数のオブジェクトを返します。そうでなければ単一のオブジェクトを返します。"
+
+# 12e035d48ae9448883fdcb464ee137a0
+#: index.rst:1117
+msgid "Searching Within the Parse Tree"
+msgstr "パースツリーの中を検索する"
+
+# 2b50b04b7a354a9dbce7fd80c55fb44c
+#: index.rst:1119
+msgid ""
+"The methods described above, ``findAll`` and ``find``, start at a certain "
+"point in the parse tree and go down. They recursively iterate through an "
+"object's ``contents`` until they bottom out."
+msgstr "``findAll`` と ``find`` はパースツリーの指定した場所から始まり、辿って行きます。一番最後にたどり着くまでオブジェクトの ``contents`` を再帰的にイテレートします。"
+
+# ba6a4c2a9f54436490a2c3773bf9016e
+#: index.rst:1121
+msgid ""
+"This means that you can't call these methods on ``NavigableString`` objects, "
+"because they have no ``contents``: they're always the leaves of the parse "
+"tree."
+msgstr "これは ``NavigableString`` オブジェクトではこれらのメソッドを呼べないということを意味しています。なぜなら ``NavigableString`` オブジェクトは ``contents`` を持たない、パースツリーの葉の部分だからです。"
+
+# 4a9334dfa4104761a676004e2acd4a90
+#: index.rst:1123
+msgid ""
+"But downwards isn't the only way you can iterate through a document. Back "
+"in :ref:`Navigating the Parse Tree <navigating_the_parse_tree>` I showed you "
+"many other ways: ``parent``, ``nextSibling``, and so on. Each of these "
+"iteration techniques has two corresponding methods: one that works like "
+"``findAll``, and one that works like ``find``. And since ``NavigableString`` "
+"objects *do* support these operations, you can call these methods on them as "
+"well as on ``Tag`` objects and the main parser object."
+msgstr "しかし、下方向だけがドキュメントをイテレートする方向ではありません。 :ref:`パースツリーをナビゲートする <navigating_the_parse_tree>` で述べたように、他にもいろいろな方法があります。 ``parent`` 、 ``nextSibling`` などです。これらのイテレートは２つの対応するメソッドを持っています。一つは ``findAll`` と似ており、もう一つは ``find`` と似ています。 ``NavigableString`` オブジェクトはこれらの操作をサポート **している** ので、これらのメソッドを ``Tag`` オブジェクトやパーサーオブジェクトと同じように呼び出すことが出来ます。"
+
+# e9255594cc384d2dbbcd480b463dd1d0
+#: index.rst:1125
+msgid ""
+"Why is this useful? Well, sometimes you just can't use findAll or find to "
+"get to the ``Tag`` or ``NavigableString`` you want. For instance, consider "
+"some HTML like this:"
+msgstr "なんでこれが便利なんでしょうか。 欲しい ``Tag`` や ``NavigableStrin`` を ``findAll`` あるいは ``find`` できないときがあります。例えば、こんなHTMLを考えてみましょう。"
+
+# 96f97d03fcbe46f2a545d10ab12b4f6f
+#: index.rst:1138
+msgid ""
+"There are a number of ways to navigate to the <LI> tag that contains the "
+"data you want. The most obvious is this:"
+msgstr "欲しいデータを持っている<LI>タグを得る方法はいくつもあります。最も分かりやすいのはこんな感じです。"
+
+# 386566a0aac440b2a24ed5b0081bc070
+#: index.rst:1145
+msgid ""
+"It should be equally obvious that that's not a very stable way to get that "
+"<LI> tag. If you're only scraping this page once it doesn't matter, but if "
+"you're going to scrape it many times over a long period, such considerations "
+"become important. If the irrelevant list grows another <LI> tag, you'll get "
+"that tag instead of the one you want, and your script will break or give the "
+"wrong data."
+msgstr "<LI>タグを手に入れる安定した方法ではないことは明白です。もし一回だけスクレイピングをするのであれば問題にはなりませんが、もし長期間に渡って何度もスクレイピングするのであればこのような配慮はとても重要になるでしょう。もし別の<LI>タグによって間違ったリストを作った場合、欲しいものとは別のタグを手に入れる事になり、間違ったデータであなたのスクリプトが壊れてしまうでしょう。"
+
+# 67829f5573884d36b5106111f695639c
+#: index.rst:1152
+msgid ""
+"That's is a little better, because it can survive changes to the irrelevant "
+"list. But if the document grows another irrelevant list at the top, you'll "
+"get the first <LI> tag of that list instead of the one you want. A more "
+"reliable way of referring to the ul tag you want would better reflect that "
+"tag's place in the structure of the document."
+msgstr "これはちょっとましになりました。なぜなら、間違ったリストになっても生き残れるからです。でも、ドキュメントが最初から間違った別のリストの場合、欲しい<LI>タグではない、最初の<LI>タグを手に入れることになります。もっと信頼性がある方法は、ドキュメント構造の中のulタグの場所を反映させる方法です。"
+
+# 4cd7630efb7e4e11a62211b2439904f4
+#: index.rst:1154
+msgid ""
+"When you look at that HTML, you might think of the list you want as 'the "
+"<UL> tag beneath the <H1> tag'. The problem is that the tag isn't contained "
+"inside the <H1> tag; it just happens to comes after it. It's easy enough to "
+"get the <H1> tag, but there's no way to get from there to the <UL> tag using "
+"``first`` and ``fetch``, because those methods only search the ``contents`` "
+"of the <H1> tag. You need to navigate to the <UL> tag with the ``next`` or "
+"``nextSibling`` members:"
+msgstr "このHTMLを見た時、欲しいリストは「<H1>タグの下にある<UL>タグ」であると思うでしょう。問題は、<UL>タグは<h1>タグに含まれているわけではないということです。単に続いているだけです。<H1>タグを得るのは簡単ですが、<UL>タグを ``first`` や ``fetch`` を使って得る方法はありません。なぜなら、これらのメソッドは<H1>タグの ``contents`` だけを探すからです。<UL>タグを見つけるには ``next`` か ``nextSibling`` メンバ変数を使います。"
+
+# a48916923044417899889004da522886
+#: index.rst:1164
+msgid "Or, if you think this might be more stable:"
+msgstr "あるいは、もっと信頼性がある方法はこちらです。"
+
+# 39e4817fad1d47efa76b3bea18ae07e1
+#: index.rst:1174
+msgid ""
+"But that's more trouble than you should need to go through. The methods in "
+"this section provide a useful shorthand. They can be used whenever you find "
+"yourself wanting to write a while loop over one of the navigation members. "
+"Given a starting point somewhere in the tree, they navigate the tree in some "
+"way and keep track of ``Tag`` or ``NavigableString`` objects that match the "
+"criteria you specify. Instead of the first loop in the example code above, "
+"you can just write this:"
+msgstr "しかし、乗り越えなければならない問題がまだあります。この章で述べたメソッドは便利な省略法があります。これらはナビゲートする値の一つをループさせるのに使えます(訳註: 自信なし)。ツリーの中での開始地点を与えると、指定した条件に適合する ``Tag`` や ``NavigableString`` オブジェクトを記録しつつツリーをナビゲートしていきます。上のコードの最初のループの代わりにこう書くことが出来ます。"
+
+# de4a6c11cda247358fd718bbb77cabc4
+#: index.rst:1181
+msgid "Instead of the second loop, you can write this:"
+msgstr "二番目のループの代わりにこう書いても大丈夫です。"
+
+# dc15771b91774eaabec8fcb145c81156
+#: index.rst:1188
+msgid ""
+"The loops are replaced with calls to ``findNextSibling`` and ``findNext``. "
+"The rest of this section is a reference to all the methods of this kind. "
+"Again, there are two methods for every navigation member: one that returns a "
+"list the way ``findAll`` does, and one that returns a scalar the way "
+"``find`` does."
+msgstr "これらのループは ``findNextSibling`` と ``findNext`` で置き換えられます。この章の残りでこのようなメソッドの全部を解説します。もう一度言いますが、全てのナビゲート変数は2種類のメソッドがあります。一つは ``findAll`` と同じようにリストを返し、もう一つは ``find`` と同じように単一のオブジェクトを返します。"
+
+# 91fb84a6d7fc45ee9ab941f2b04f65be
+#: index.rst:1190
+msgid ""
+"One last time, let's load up the familiar soup document for example's sake:"
+msgstr "最後に、見慣れたsoupのドキュメントを例として使ってみます。"
+
+# 24846bab87c04dd99f6ca00da4614129
+#: index.rst:1228
+msgid ""
+"findNextSiblings(name, attrs, text, limit, \\*\\*kwargs) and findNextSibling"
+"(name, attrs, text, \\*\\*kwargs"
+msgstr "findNextSiblings(name, attrs, text, limit, \\*\\*kwargs) と findNextSibling(name, attrs, text, \\*\\*kwargs"
+
+# 0e414596757b4103805d3f5ebfa4d156
+#: index.rst:1230
+msgid ""
+"These methods repeatedly follow an object's ``nextSibling`` member, "
+"gathering ``Tag`` or ``NavigableText`` objects that match the criteria you "
+"specify. In terms of :ref:`the document above <one_last_time_example>`:"
+msgstr "これらのメソッドはあるオブジェクトの ``nextSibling`` メンバー変数を辿り、指定した ``Tag`` あるいは ``NavigableText`` を集めてきます。 :ref:`上記ドキュメント <one_last_time_example>` に関連します。"
+
+# 80aa78ae38b1407e92bf44c306f49d86
+#: index.rst:1242
+msgid ""
+"findPreviousSiblings(name, attrs, text, limit, \\*\\*kwargs) and "
+"findPreviousSibling(name, attrs, text, \\*\\*kwargs)"
+msgstr "findPreviousSiblings(name, attrs, text, limit, \\*\\*kwargs) と findPreviousSibling(name, attrs, text, \\*\\*kwargs)"
+
+# 3adc302941c0437ea7e2d861d67b2cdd
+#: index.rst:1244
+msgid ""
+"These methods repeatedly follow an object's ``previousSibling`` member, "
+"gathering ``Tag`` or ``NavigableText`` objects that match the criteria you "
+"specify. In terms of :ref:`the document above <one_last_time_example>`:"
+msgstr "これらのメソッドはあるオブジェクトの ``previousSibling`` メンバ変数を辿り、指定した ``Tag`` あるいは ``NavigableText`` を集めてきます。 :ref:`上記ドキュメント <one_last_time_example>` に関連します。"
+
+# 500c42f2273e4806863f5021667066d8
+#: index.rst:1256
+msgid ""
+"findAllNext(name, attrs, text, limit, \\*\\*kwargs) and findNext(name, "
+"attrs, text, \\*\\*kwargs)"
+msgstr "findAllNext(name, attrs, text, limit, \\*\\*kwargs) と findNext(name, attrs, text, \\*\\*kwargs)"
+
+# 37cdd39a304e4881bf23a9e887b34429
+#: index.rst:1258
+msgid ""
+"These methods repeatedly follow an object's next member, gathering ``Tag`` "
+"or ``NavigableText`` objects that match the criteria you specify. In terms "
+"of :ref:`the document above <one_last_time_example>`:"
+msgstr "これらのメソッドはあるオブジェクトのメンバ変数を辿り、指定した ``Tag`` あるいは ``NavigableText`` を集めてきます。 :ref:`上記ドキュメント <one_last_time_example>` に関連します。"
+
+# 5ddb54f485794d209bb5e2a2b789d1ef
+#: index.rst:1273
+msgid ""
+"findAllPrevious(name, attrs, text, limit, \\*\\*kwargs) and findPrevious"
+"(name, attrs, text, \\*\\*kwargs)"
+msgstr "findAllPrevious(name, attrs, text, limit, \\*\\*kwargs) と findPrevious (name, attrs, text, \\*\\*kwargs)"
+
+# f94918c11c36416dbe7b3c8276f2ecb9
+#: index.rst:1275
+msgid ""
+"These methods repeatedly follow an object's previous member, gathering "
+"``Tag`` or ``NavigableText`` objects that match the criteria you specify. In "
+"terms of :ref:`the document above <one_last_time_example>`:"
+msgstr "これらのメソッドはあるオブジェクトの ``previous`` メンバ変数を辿り、指定した ``Tag`` あるいは ``NavigableText`` を集めてきます。 :ref:`上記ドキュメント <one_last_time_example>` に関連します。"
+
+# c3637d5345f343e1b849b3a80dd758df
+#: index.rst:1291
+msgid ""
+"findParents(name, attrs, limit, \\*\\*kwargs) and findParent(name, attrs, \\*"
+"\\*kwargs)"
+msgstr "findParents(name, attrs, limit, \\*\\*kwargs) と findParent(name, attrs, \\*\\*kwargs)"
+
+# fb7e908d562647c4b2e58ded294bba0e
+#: index.rst:1293
+msgid ""
+"These methods repeatedly follow an object's ``parent`` member, gathering "
+"``Tag`` or ``NavigableText`` objects that match the criteria you specify. "
+"They don't take a ``text`` argument, because there's no way any object can "
+"have a ``NavigableString`` for a parent. In terms of :ref:`the document "
+"above <one_last_time_example>`:"
+msgstr "これらのメソッドはあるオブジェクトの ``parent`` メンバ変数を辿り、指定した ``Tag`` あるいは ``NavigableText`` を集めてきます。これらは ``text`` 引数を取りません。なぜなら、どんなオブジェクトも ``NavigableString`` を親として持たないからです :ref:`上記ドキュメント <one_last_time_example>` に関連します。"
+
+# 2ff5c56b9c204e3b8b823189ffcd8ba4
+#: index.rst:1307
+msgid "Modifying the Parse Tree"
+msgstr "パースツリーを変更する。"
+
+# 968d5a90987942539e34bad8ec0f5895
+#: index.rst:1309
+msgid ""
+"Now you know how to find things in the parse tree. But maybe you want to "
+"modify it and print it back out. You can just rip an element out of its "
+"parent's ``contents``, but the rest of the document will still have "
+"references to the thing you ripped out. Beautiful Soup offers several "
+"methods that let you modify the parse tree while maintaining its internal "
+"consistency."
+msgstr "これでパースツリーの中からなにかを見つける方法が分かりました。でも、たぶん見つけたものを変更したり表示したりしたいでしょう。その場合、単にそのエレメントをその親の ``contents`` から取り除けば良いです(訳註: ちょっと不明)。その場合でもドキュメントの残りは今取り除いたエレメントへの参照を持っています。Beautiful Soupは内部の一貫性を保ちつつ、パースツリーを変更するメソッドを提供します。"
+
+# 82f5875a315a4afdb34105d6dd5efce2
+#: index.rst:1312
+msgid "Changing attribute values"
+msgstr "属性の値を変える"
+
+# db0614a461fd4dbd978cc761ac1f3c28
+#: index.rst:1314
+msgid ""
+"You can use dictionary assignment to modify the attribute values of ``Tag`` "
+"objects."
+msgstr "辞書形式になっている ``Tag`` オブジェクトの属性値を直接変えると、エレメントの属性の値が変わったことになります。"
+
+# be491f46aca2499d868c19263453ffbb
+#: index.rst:1336
+msgid "You can also delete attribute values, and add new ones:"
+msgstr "同じように、属性の値を消したり、新しい属性を付け加えたりも出来ます。"
+
+# 23fc642b82314905ad88760f5d21b325
+#: index.rst:1349
+msgid "Removing elements"
+msgstr "エレメントを削除する"
+
+# 9c4717be8b1b4a339b71f24d7fda179f
+#: index.rst:1351
+msgid ""
+"Once you have a reference to an element, you can rip it out of the tree with "
+"the ``extract`` method. This code removes all the comments from a document:"
+msgstr "一度エレメントへの参照を得てしまえば、 ``extract`` メソッドを使ってそのエレメントをツリーから取り払ってしまえます。このコードはドキュメントから全てのコメントを取り除きます。"
+
+# 1404ae00697e4ee890f58226464975f9
+#: index.rst:1364
+msgid "This code removes a whole subtree from a document:"
+msgstr "このコードはドキュメントの中のあるサブツリーを全部取り除きます。"
+
+# a55f7d742ff44311ab967530550cec68
+#: index.rst:1385
+msgid ""
+"The ``extract`` method turns one parse tree into two disjoint trees. The "
+"navigation members are changed so that it looks like the trees had never "
+"been together:"
+msgstr "``extract`` メソッドは一つのパースツリーを二つの別々のツリーに分解します。ナビゲーションのメンバ変数は変化するため、この二つのツリーはもう二度と一つにならないように見えます。"
+
+# ad32ea39e3cf4adba511815f078776df
+#: index.rst:1399
+msgid "Replacing one Element with Another"
+msgstr "あるエレメントを別なエレメントに置き換える"
+
+# 193c5a609ab64bd398264817b5cfcc70
+#: index.rst:1401
+msgid ""
+"The ``replaceWith`` method extracts one page element and replaces it with a "
+"different one. The new element can be a ``Tag`` (possibly with a whole parse "
+"tree beneath it) or a ``NavigableString``. If you pass a plain old string "
+"into ``replaceWith``, it gets turned into a ``NavigableString``. The "
+"navigation members are changed as though the document had been parsed that "
+"way in the first place."
+msgstr "``replaceWith`` メソッドは一つのページエレメントを取り除き、別のエレメントで置き換えます。新しいエレメントは ``Tag`` (そのエレメントの直下のパースツリー全体かもしれません) でも、 ``NavigableString`` でもかまいません。もし単なる文字列を ``replaceWith`` に与えた場合、 ``NavigableString`` に変換されます。パースし直されるため、ナビゲーションのメンバ変数は変わります。"
+
+# 98889f9342f84655823f95ef4d83cb5b
+#: index.rst:1403
+msgid "Here's a simple example:"
+msgstr "簡単な例を記します。"
+
+# 29ad56db579044f3a137ec6b328d1e56
+#: index.rst:1423
+msgid "Here's a more complex example that replaces one tag with another:"
+msgstr "あるタグを別のタグに入れ替える、もうちょっと複雑な例です。"
+
+# 2efffdd723da4b20a3cfe7ca6bec2724
+#: index.rst:1435
+msgid ""
+"You can even rip out an element from one part of the document and stick it "
+"in another part:"
+msgstr "ドキュメントの一部からエレメントを取り除き、別の場所に埋め込むこともできます。"
+
+# 7f3ac89690c341059d3ec057252f50fe
+#: index.rst:1449
+msgid "Adding a Brand New Element"
+msgstr "まったく新しいエレメントを追加する"
+
+# 6c19406e01b6439a8a7d617090ca2b0f
+#: index.rst:1451
+msgid ""
+"The ``Tag`` class and the parser classes support a method called ``insert``. "
+"It works just like a Python list's insert method: it takes an index to the "
+"tag's contents member, and sticks a new element in that slot."
+msgstr "``Tag`` クラスとパーサークラスは ``insert`` というメソッドを持っています。これはPythonのリストのinsertメソッドと同じ働きをします。タグが含んでいるメンバーのインデックスを引数に取り、新しいエレメントをその場所に埋め込みます。"
+
+# d68aca2d44f148f58f019c29f4da3bb8
+#: index.rst:1453
+msgid ""
+"This was demonstrated in the previous section, when we replaced a tag in the "
+"document with a brand new tag. You can use ``insert`` to build up an entire "
+"parse tree from scratch:"
+msgstr "ドキュメント中のタグを新しいタグで置き換えるデモは、以前の章で行いました。 ``insert`` を使って完全なパースツリーを一から作り上げることも出来ます。"
+
+# 98972f3f4fca437c935989fc4e4bdf11
+#: index.rst:1473
+msgid ""
+"An element can occur in only one place in one parse tree. If you give "
+"``insert`` an element that's already connected to a soup object, it gets "
+"disconnected (with ``extract``) before it gets connected elsewhere. In this "
+"example, I try to insert my ``NavigableString`` into a second part of the "
+"soup, but it doesn't get inserted again. It gets moved:"
+msgstr "一つのエレメントは、一つのパースツリーにおいて一つの場所しか存在できません。もし、すでにsoupオブジェクトで使われているエレメントを ``insert`` しようとすると、どこかに入れる前に (``extract`` を使って)soupオブジェクトから取り外されます。この例では、 ``NavigableString`` をsoupの二つ目の場所に入れようとしていますが、もう一度入れることはできません。移動します。"
+
+# 21edc8e013ee4da8995598f6934e43a8
+#: index.rst:1481
+msgid ""
+"This happens even if the element previously belonged to a completely "
+"different soup object. An element can only have one parent, one "
+"``nextSibling``, et cetera, so it can only be in one place at a time."
+msgstr "これはそのエレメントが完全に別なsoupオブジェクトに属しても起こります。エレメントは単一の親、 単一の ``nextSibleing`` などしか持ちません。そのため、エレメントは同時に一つの場所でしか存在しないのです。"
+
+# 0aa82bc08cfc4b25a4a9d960f63da141
+#: index.rst:1484
+msgid "Troubleshooting"
+msgstr "トラブルシューティング"
+
+# 763783ad2a62418eb4fcc6dde238f4b1
+#: index.rst:1486
+msgid "This section covers common problems people have with Beautiful Soup."
+msgstr "この章ではBeautiful Soupを使うときによくある問題について解説します。"
+
+# 10dfff9a851f4d53bea21a4943d3dad6
+#: index.rst:1489
+msgid "Why can't Beautiful Soup print out the non-ASCII characters I gave it?"
+msgstr "なんでASCIIじゃない文字をちゃんと表示してくれないの？"
+
+# dd1824f3fe9648bba95e8b2275309bcf
+#: index.rst:1491
+msgid ""
+"If you're getting errors that say: \"'ascii' codec can't encode character "
+"'x' in position y: ordinal not in range(128)\", the problem is probably with "
+"your Python installation rather than with Beautiful Soup. Try printing out "
+"the non-ASCII characters without running them through Beautiful Soup and you "
+"should have the same problem. For instance, try running code like this:"
+msgstr "もしそのエラーが\"'ascii' codec can't encode character 'x' in position y: ordinal not in range(128)\"だったら、その問題はBeautiful SoupではなくPythonの問題です。非ASCIIの文字をBeautiful Soupを使わずに表示させて、同じ問題が起きるかどうかを確認してください。例えば、ここに実際に動くコードを記します。"
+
+# 43964d614a4c4735922326d177002480
+#: index.rst:1499
+msgid ""
+"If this works but Beautiful Soup doesn't, there's probably a bug in "
+"Beautiful Soup. However, if this doesn't work, the problem's with your "
+"Python setup. Python is playing it safe and not sending non-ASCII characters "
+"to your terminal. There are two ways to override this behavior."
+msgstr "もしこれが動いてBeautiful Soupでは動かなければ、それはたぶんBeautiful Soupのバグです。しかし、もしこれが動かなければあなたのPython環境の問題です。Pythonは安全に非ASCII文字をターミナルに御斬ります。この動作を上書きするためには二つの方法があります。"
+
+# 5015de0c7b764ff09b52d18967e915b9
+#: index.rst:1501
+msgid ""
+"The easy way is to remap standard output to a converter that's not afraid to "
+"send ISO-Latin-1 or UTF-8 characters to the terminal."
+msgstr "簡単な方法は、標準出力をISO-Latin-1かUTF-8の文字に対するコンバーターにマップしなおすことです。"
+
+# 0ff78369723b48afa75b9b43b805a44d
+#: index.rst:1511
+msgid ""
+"``codecs.lookup`` returns a number of bound methods and other objects "
+"related to a codec. The last one is a ``StreamWriter`` object capable of "
+"wrapping an output stream."
+msgstr "``codecs.lookup`` は使えるメソッドの数とコーデックに関連する他のオブジェクトを返します。最後のはアウトプットストリームをラップできる ``StreamWrite`` オブジェクトです。"
+
+# a7dfcf508b9e4ea4a8b7fd432ba2962c
+#: index.rst:1513
+msgid ""
+"The hard way is to create a ``sitecustomize.py`` file in your Python "
+"installation which sets the default encoding to ISO-Latin-1 or to UTF-8. "
+"Then all your Python programs will use that encoding for standard output, "
+"without you having to do something for each program. In my installation, I "
+"have a ``/usr/lib/python/sitecustomize.py`` which looks like this:"
+msgstr "難しい方法は、デフォルトのエンコーディングをISO-Latin-1かUTF-8に設定する ``sitecustomeize.py`` ファイルを作ってPythonの環境にインストールする方法です。これにより、個々のプログラムになにもすることなく、全てのPythonプログラムが標準出力にこのエンコーディングを使うようになります。私の環境では、 ``/usr/lib/python/sitecustomize.py`` がこんな感じになってます。"
+
+# fb5c68acd71d4fb49edb3fc904bb3c2d
+#: index.rst:1520
+msgid ""
+"For more information about Python's Unicode support, look at `Unicode for "
+"Programmers <http://dalchemy.com/opensource/unicodedoc/>`_ or `End to End "
+"Unicode Web Applications in Python <http://dalchemy.com/opensource/"
+"unicodedoc/>`_. Recipes 1.20 and 1.21 in the Python cookbook are also very "
+"helpful."
+msgstr "Pythonのユニコードサポートについてもっと知りたい場合は、`Unicode for Programmers <http://dalchemy.com/opensource/unicodedoc/>`_ か `End to End Unicode Web Applications in Python <http://dalchemy.com/opensource/unicodedoc/>`_ を見てください。Pythonクックブックの1.20と1.21のレシピも参考になります。"
+
+# d5ff3839e5594fe9b17566dd333b4826
+#: index.rst:1522
+msgid ""
+"Remember, even if your terminal display is restricted to ASCII, you can "
+"still use Beautiful Soup to parse, process, and write documents in UTF-8 and "
+"other encodings. You just can't print certain strings with ``print``."
+msgstr "ターミナルの表示がASCIIに制限されていたとしても、パース、処理、UTF-8や他のエンコーディングで書きだすことにBeautiful Soupが使えることは覚えておいてください。ただ単に ``print`` で正しい文字が表示されないだけですから。"
+
+# a9e10592e02349b3b50b2b3a9263d896
+#: index.rst:1525
+msgid "Beautiful Soup loses the data I fed it! Why? WHY?????"
+msgstr "Beautiful Soupはおれが食わせたデータを無くしやがった！なんで？なんでだよ！"
+
+# 4283a5a2fe2b4db69ba50e0c26af2ba2
+#: index.rst:1527
+msgid ""
+"Beautiful Soup can handle poorly-structured SGML, but sometimes it loses "
+"data when it gets stuff that's not SGML at all. This is not nearly as common "
+"as poorly-structured markup, but if you're building a web crawler or "
+"something you'll surely run into it."
+msgstr "Beautiful Soupは貧弱な構造のSGMLを扱うことが出来ますが、SGMLではないとみなして情報を失ってしまうことがあります。これは貧弱な構造を持つマークアップで共通に起きることではありませんが、webクローラーを作っている時とか、偶然情報を失うこととかがありえます。"
+
+# 717e525e189c473abbcf9974cda8feb2
+#: index.rst:1529
+msgid ""
+"The only solution is to :ref:`sanitize the data ahead "
+"<sanitizing_bad_data_with_regexps>` of time with a regular expression. Here "
+"are some examples that I and Beautiful Soup users have discovered:"
+msgstr "解決方法は正規表現で :ref:`データを事前にサニタイズする <sanitizing_bad_data_with_regexps>` ことだけです。以下に私やBeautiful Soupのユーザが見つけた例を示します。"
+
+# fd278612a1da4865b9c4f809c578248d
+#: index.rst:1531
+msgid ""
+"Beautiful Soup treats ill-formed XML definitions as data. However, it loses "
+"well-formed XML definitions that don't actually exist:"
+msgstr "Beautiful Soupはまずい形式ののXML定義をデータとして扱います。しかし、実際には存在しない正しい形式のXML定義を失ってしまいます。"
+
+# 0628e24d42234e40ae2468cfc1179107
+#: index.rst:1541
+msgid ""
+"If your document starts a declaration and never finishes it, Beautiful Soup "
+"assumes the rest of your document is part of the declaration. If the "
+"document ends in the middle of the declaration, Beautiful Soup ignores the "
+"declaration totally. A couple examples:"
+msgstr "もし、あなたのドキュメントが宣言から始まり、終わらなかったら、Beautiful Soupは残りのドキュメントを宣言の一部だと推測します。もし、ドキュメントが宣言の途中で終わった場合、Beautiful Soupは宣言を完全に無視します。いくつか例を示します。"
+
+# ae8d99e734094761bf76947779e0185c
+#: index.rst:1556
+msgid ""
+"There are a couple ways to fix this; one is detailed `here <http://groups."
+"google.com/group/beautifulsoup/browse_thread/thread/69093cb0d3a3cf63>`_ ."
+msgstr "これを直す方法はいくつかあります。ひとつは `ここ <http://groups.google.com/group/beautifulsoup/browse_thread/thread/69093cb0d3a3cf63>`_ に書かれています。"
+
+# 8749e743197e4f7ca206c3344b05fb7e
+#: index.rst:1558
+msgid ""
+"Beautiful Soup also ignores an entity reference that's not finished by the "
+"end of the document:"
+msgstr "Beautiful Soupはドキュメントの終りにいっても終わっていないエンティティの参照も無視します。 (訳註: あとで確認)"
+
+# a1d16f7e1d9243db83253bd0f7ec20c2
+#: index.rst:1565
+msgid ""
+"I've never seen this in real web pages, but it's probably out there "
+"somewhere."
+msgstr "私は実際のwebページでは見たことありません。しかし、どこかにはあるんでしょう。"
+
+# 60e97c0fe07846d5a84f44e31410423e
+#: index.rst:1567
+msgid ""
+"A malformed comment will make Beautiful Soup ignore the rest of the "
+"document. This is covered as the example in :ref:`Sanitizing Bad Data with "
+"Regexps <sanitizing_bad_data_with_regexps>`."
+msgstr "不正な形式のコメントがあると、Beautiful Soupは残りのドキュメントを全部無視してしまいます。これは :ref:`正規表現でサニタイズする <sanitizing_bad_data_with_regexps>` で述べています。 "
+
+# bd65436f864f46ea9b0f799303fcadd9
+#: index.rst:1570
+msgid "The parse tree built by the BeautifulSoup class offends my senses!"
+msgstr "BeautifulSoupが作ったパースツリーはなんかおれに合わねーよ！"
+
+# b4de9bbb0b6c4740952d417f285774d1
+#: index.rst:1572
+msgid ""
+"To get your markup parsed differently, check out :ref:`Other Built-In "
+"Parsers <other_built_in_parsers>`, or else :ref:`build a custom parser "
+"<customizing_the_parser>`."
+msgstr "違うようにパースしたい場合は、 :ref:`他の組み込みパーサー <other_built_in_parsers>` か、 :ref:`パーサーをカスタマイズする <customizing_the_parser>` を参考にしてください。"
+
+# e84c7ed17b534485bb348e6a5e882d15
+#: index.rst:1575
+msgid "Beautiful Soup is too slow!"
+msgstr "Beautiful Soupはすげー遅いよ！"
+
+# a00561b448af4274b50509bd73de363d
+#: index.rst:1577
+msgid ""
+"Beautiful Soup will never run as fast as ElementTree or a custom-built "
+"SGMLParser subclass. ElementTree is written in C, and SGMLParser lets you "
+"write your own mini-Beautiful Soup that only does what you want. The point "
+"of Beautiful Soup is to save programmer time, not processor time."
+msgstr "Beautiful SoupはElementTreeや自分で作ったSGMLParserのサブクラスより早くなることはありません。ElementTreeはCで書かれていますし、SGMParserは自分の好きなように小さいBeautiful Soupを書けます。Beautiful Soupの特徴は、プログラマの時間を減らすことで、プロセッサの時間を減らすことではありませんから。"
+
+# 2311cde6fc6a4302a7484571b956b1ab
+#: index.rst:1579
+msgid ""
+"That said, you can speed up Beautiful Soup quite a lot by :ref:`only parsing "
+"the parts of the document you need <improving_performance_by_parsing>`, and "
+"you can make unneeded objects get garbage-collected by using :ref:`extract "
+"or decompose <improving_performance_by_parsing>` ."
+msgstr "これはつまり、Beautiful Soupを :ref:`ドキュメントの一部だけをパースすることで、性能を向上させる <improving_performance_by_parsing>` ことができるということです。また、使っていないオブジェクトを :ref:`extractかdecomposeを使って<improving_memory_usage_with_extract>` GCに回収させることもできます。"
+
+# e7b8a06755eb4160a0d75e7db226f725
+#: index.rst:1582
+msgid "Advanced Topics"
+msgstr "もっと詳しく"
+
+# 43e37d134584448283148ff1c72120d2
+#: index.rst:1584
+msgid ""
+"That does it for the basic usage of Beautiful Soup. But HTML and XML are "
+"tricky, and in the real world they're even trickier. So Beautiful Soup keeps "
+"some extra tricks of its own up its sleeve."
+msgstr "これまで述べてきたことで、Beautiful Soupの基本的な使い方は終わりました。しかし、HTMLとXMLはトリッキーで、実際の世界はもっとトリッキーです。なので、実はBeautiful Soupはもうちょっと仕掛けを隠し持っています。"
+
+# d551ebecabc249879dc4d0f0917edc7d
+#: index.rst:1587
+msgid "Generators"
+msgstr "ジェネレーター"
+
+# 2d8c43f044784dfa842ef49e9e6639ac
+#: index.rst:1589
+msgid ""
+"The search methods described above are driven by generator methods. You can "
+"use these methods yourself: they're called ``nextGenerator``, "
+"``previousGenerator``, ``nextSiblingGenerator``, "
+"``previousSiblingGenerator``, and ``parentGenerator``. ``Tag`` and parser "
+"objects also have ``childGenerator`` and ``recursiveChildGenerator`` "
+"available."
+msgstr "上で述べたSearchメソッドはジェネレーターメソッドで動いています。このメソッドを自分で使うことができます。具体的には、 ``nextGenerator`` ・ ``previousGenerator`` ・ ``nextSiblingGenerator`` ・ ``previousSiblingGenerator`` ・ ``parentGenerator`` です。 ``Tag`` やパーサーオブジェクトは ``childGenerator`` と ``recursiveChildGenerator`` をさらに持っています。"
+
+# 4aea5b6e5ea64aaab0b79b58f0a86557
+#: index.rst:1591
+msgid ""
+"Here's a simple example that strips HTML tags out of a document by iterating "
+"over the document and collecting all the strings."
+msgstr "ドキュメントをイテレートして文字列を全て集めることで、HTMLタグを取り除く簡単な例を示します。"
+
+# ca0eb95e8829488f87b0c2cde29a9268
+#: index.rst:1604
+msgid ""
+"Of course, you don't really need a generator to find only the text beneath a "
+"tag. That code does the same thing as ``.findAll(text=True)``."
+msgstr "もちろん、タグの下の文字列を見つけるためにジェネレーターは必要ありません。次のコードは  ``.findAll(text=True)`` と同じ事をします。"
+
+# 039b78ec10e646e18acc4d143e98e4d4
+#: index.rst:1611
+msgid ""
+"Here's a more complex example that uses ``recursiveChildGenerator`` to "
+"iterate over the elements of a document, printing each one as it gets it."
+msgstr "こっちは ``recursiveChildGenerator`` を使うもっと複雑な例です。ドキュメントのエレメントをイテレートし、出力します。"
+
+# ec81786aaa634ea6b7113301424a2420
+#: index.rst:1632
+msgid "Other Built-In Parsers"
+msgstr "他の組み込みパーサー"
+
+# ad6167c8912c410590e8551f78f25d4e
+#: index.rst:1634
+msgid ""
+"Beautiful Soup comes with three parser classes besides :ref:`BeautifulSoup "
+"<parsing_html>` and :ref:`BeautifulStoneSoup <parsing_xml>`:"
+msgstr "Beautiful Soupには :ref:`BeautifulSoup <parsing_html>` と :ref:`BeautifulStoneSoup <parsing_xml>` 以外に３つのパーサークラスがあります。"
+
+# 1b9ea0caa2ad44d4844aad8b98eb536b
+#: index.rst:1636
+msgid ""
+"``MinimalSoup`` is a subclass of ``BeautifulSoup``. It knows most facts "
+"about HTML like which tags are self-closing, the special behavior of the "
+"<SCRIPT> tag, the possibility of an encoding mentioned in a <META> tag, etc. "
+"But it has no nesting heuristics at all. So it doesn't know that <LI> tags "
+"go underneath <UL> tags and not the other way around. It's useful for "
+"parsing pathologically bad markup, and for subclassing."
+msgstr "``MinimalSoup`` は ``BeautifulSoup`` のサブクラスで、HTMLのような空要素タグ、<SCRIPT>タグの特殊な挙動、<META>タグがとりうるエンコーディングの種類などを理解します。しかし、これは経験則的アルゴリズムをまったく持ちません。そのため、<LI>タグが<UL>タグの下にくることなどを知りません。これは病的なマークアップをパースする時に使えます。"
+
+# e66241346ef745db9cc5ffc76cbc8186
+#: index.rst:1638
+msgid ""
+"``ICantBelieveItsBeautifulSoup`` is also a subclass of ``BeautifulSoup``. It "
+"has HTML heuristics that conform more closely to the HTML standard, but "
+"ignore how HTML is used in the real world. For instance, it's valid HTML to "
+"nest <B> tags, but in the real world a nested <B> tag almost always means "
+"that the author forgot to close the first <B> tag. If you run into someone "
+"who actually nests <B> tags, then you can use "
+"``ICantBelieveItsBeautifulSoup``."
+msgstr "``ICantBelieveItsBeautifulSoup`` クラスも ``BeautifulSoup`` クラスのサブクラスです。これはHTML標準に近い経験則を持ちますが、実世界でどのように使われているかは無視します。例えば、<B>タグを入れ子にすることは正しいHTMLなのですが、実世界では入れ子になっている<B>のほとんどは著者が最初の<B>タグを閉じ忘れたものなのです。もし、本当に<B>タグの入れ子をしたいる場合には、 ``ICantBelieveItsBeautifulSoup`` を使ってください。"
+
+# 21fc11db4e67420c9c86060719222f90
+#: index.rst:1640
+msgid ""
+"``BeautifulSOAP`` is a subclass of ``BeautifulStoneSoup``. It's useful for "
+"parsing documents like SOAP messages, which use a subelement when they could "
+"just use an attribute of the parent element. Here's an example:"
+msgstr "``BeautifulSOAP`` は ``BeautifulStoneSoup`` のサブクラスです。これは、単に親エレメントの属性を使うためだけにサブエレメントを使う、SOAPメッセージをパースするのに便利です。"
+
+# c4695a1f90ce449b8b0ed40572afa2e8
+#: index.rst:1651
+msgid ""
+"With ``BeautifulSOAP`` you can access the contents of the <TAG> tag without "
+"descending into the tag."
+msgstr "``BeautifulSOAP`` ではタグの中身を見なくても<TAG>タグのコンテンツにアクセスできます。"
+
+# ffe0324ce3334e9e9df6777b625c3225
+#: index.rst:1656
+msgid "Customizing the Parser"
+msgstr "パーサーをカスタマイズする"
+
+# cf04e60609aa4367a1b43d872b33bafb
+#: index.rst:1658
+msgid ""
+"When the built-in parser classes won't do the job, you need to customize. "
+"This usually means customizing the lists of nestable and self-closing tags. "
+"You can customize the list of self-closing tags by passing a :ref:"
+"`selfClosingTags <the_most_common_shortcoming>` argument into the soup "
+"constructor. To customize the lists of nestable tags, though, you'll have to "
+"subclass."
+msgstr "組み込みのパーサークラスがうまく動かないときは、カスタマイズが必要です。このカスタマイズとはだいたいの場合、入れ子可能なタグと空要素可能なタグのリストをいじることです。空要素タグは :ref:`selfClosingTags <the_most_common_shortcoming>` をsoupコンストラクタに渡すことでカスタマイズできます。入れ子可能なタグのリストをカスタマイズするには、サブクラスを作成する必要があります。"
+
+# 6be48e894d53450ea4ae2c6da2ac4958
+#: index.rst:1660
+msgid ""
+"The most useful classes to subclass are ``MinimalSoup`` (for HTML) and "
+"``BeautifulStoneSoup`` (for XML). I'm going to show you how to override "
+"``RESET_NESTING_TAGS`` and ``NESTABLE_TAGS`` in a subclass. This is the most "
+"complicated part of Beautiful Soup and I'm not going to explain it very well "
+"here, but I'll get something written and then I can improve it with feedback."
+msgstr "最も便利なクラスは ``MinimalSoup`` (HTML向け) と ``BeautifulStoneSoup`` (XML向け)です。これからサブクラスの中の ``RESET_NESTING_TAGS`` と ``NESTABLE_TAGS`` をオーバーライドする方法を説明します。これはBeautiful Soupで最も分かりにくい部分で、上手く説明できません。でも、なにかしら書くことで、フィードバックを受けてもっと良くすることができます。"
+
+# ebf03bdc30ea434aa9e774a7c0b2388a
+#: index.rst:1662
+msgid ""
+"When Beautiful Soup is parsing a document, it keeps a stack of open tags. "
+"Whenever it sees a new start tag, it tosses that tag on top of the stack. "
+"But before it does, it might close some of the open tags and remove them "
+"from the stack. Which tags it closes depends on the qualities of tag it just "
+"found, and the qualities of the tags in the stack."
+msgstr "Beautiful Soupがドキュメントをパースする時、開始タグをスタックに詰みます。新しいタグを発見するたびに、スタックの一番上に積んでいきます。しかしその前に、他の開始タグを閉じ、スタックから取り除くことがあります。今まさに見つけたタグの質と、スタックの中のタグの質に応じてどのタグを閉じるか決定します。"
+
+# 6ab3c03cfea74b24a9291cd7a96c7c4d
+#: index.rst:1664
+msgid ""
+"The best way to explain it is through example. Let's say the stack looks "
+"like ['html', 'p', 'b'], and Beautiful Soup encounters a <P> tag. If it just "
+"tossed another 'p' onto the stack, this would imply that the second <P> tag "
+"is within the first <P> tag, not to mention the open <B> tag. But that's not "
+"the way <P> tags work. You can't stick a <P> tag inside another <P> tag. A "
+"<P> tag isn't \"nestable\" at all."
+msgstr "一番良い方法は例を使って説明することです。例えば、スタックが ['html', 'p', 'b'] となってるとしましょう。ここでBeautiful Soupが<P>タグを見つけました。もし単にもう一つの 'p' をスタックに積むだけであれば、二つ目の<P>タグは最初の<P>の中にあることとみなして、開いている<B>タグについてはなにも考えません。しかし、これでは<P>タグがちゃんと動きません。<P>タグは別の<P>タグの中には入れられません。<P>タグは\"入れ子\"にならないのです。"
+
+# b96b8cbf16684143aa8852cb89507963
+#: index.rst:1666
+msgid ""
+"So when Beautiful Soup encounters a <P> tag, it closes and pops all the tags "
+"up to and including the previously encountered tag of the same type. This is "
+"the default behavior, and this is how ``BeautifulStoneSoup`` treats every "
+"tag. It's what you get when a tag is not mentioned in either "
+"``NESTABLE_TAGS`` or ``RESET_NESTING_TAGS``. It's also what you get when a "
+"tag shows up in ``RESET_NESTING_TAGS`` but has no entry in "
+"``NESTABLE_TAGS``, the way the <P> tag does."
+msgstr "そのため、Beautiful Soupは<P>タグを見つけたら、今まで見つけた同じ種類のタグを含む全てのタグを閉じます。これは標準の振る舞いであり、 ``BeautifulStoneSoup`` はどのようなのタグについても同様のことを行います。もしタグが ``NESTABLE_TAGS`` か ``RESET_NESTING_TAGS`` に含まれていない場合、こうなります。もしあるタグが ``RESET_NESTING_TAGS`` に含まれており、 ``NESTABLE_TAGS`` に含まれていない場合、<P>タグと同じようになります。"
+
+# e7241eee78704522b1b9c1901182b9f3
+#: index.rst:1680
+msgid ""
+"Let's say the stack looks like ['html', 'span', 'b'], and Beautiful Soup "
+"encounters a <SPAN> tag. Now, <SPAN> tags can contain other <SPAN> tags "
+"without limit, so there's no need to pop up to the previous <SPAN> tag when "
+"you encounter one. This is represented by mapping the tag name to an empty "
+"list in NESTABLE_TAGS. This kind of tag should not be mentioned in "
+"RESET_NESTING_TAGS: there are no circumstances when encountering a <SPAN> "
+"tag would cause any tags to be popped."
+msgstr "スタックが ['html', 'span', 'b'] であり、 Beautiful Soupが<SPAN>タグを見つけたとしましょう。<SPAN>タグは別の<SPAN>タグを無限に含むことができます。そのため、新しく見つけたからといって以前の<SPAN>タグを取り出す必要はありません。これは ``NESTABLE_TAGS`` でタグ名が空のリストにマップされていることで表現されています。この種類のタグは ``RESET_NESTING_TAGS`` に含まれてはいけません。  <SPAN>タグは他のどんなタグもスタックから取り出すことはしません。"
+
+# f3e32b3bcb4b4ceea32b3f7eae9d5754
+#: index.rst:1693
+msgid ""
+"Third example: suppose the stack looks like ['ol','li','ul']: that is, we've "
+"got an ordered list, the first element of which contains an unordered list. "
+"Now suppose Beautiful Soup encounters a <LI> tag. It shouldn't pop up to the "
+"first <LI> tag, because this new <LI> tag is part of the unordered sublist. "
+"It's okay for an <LI> tag to be inside another <LI> tag, so long as there's "
+"a <UL> or <OL> tag in the way."
+msgstr "三番目の例では、['ol', 'li', 'ul']がスタックにのっています。これは、 orderd list(順序付きリスト) であり、最初のエレメントには unordered list(順序なしリスト)を含んでいます(訳註: 不明確)。ここでBeautiful Soupが<LI>タグを見つけたとしましょう。この場合、新しい<LI>タグは順序なしリストの一部ですから、最初の<LI>タグはスタックから取り出してはいけません。<UL>タグか<OL>タグがある間は、<LI>タグが別の<LI>タグの中に含まれていても構いません。(訳註:不明確)"
+
+# cfca7b8b844f4cf2bf524ae7beed9b0c
+#: index.rst:1710
+msgid ""
+"But if there is no intervening <UL> or <OL>, then one <LI> tag can't be "
+"underneath another:"
+msgstr "しかし、<UL>か<OL>が間になかった場合、一つの<LI>タグは他の<LI>タグの下にはいれられません。"
+
+# bb1a8ef549ab4100a04a0784eb6d15f9
+#: index.rst:1724
+msgid ""
+"We tell Beautiful Soup to treat <LI> tags this way by putting \"li\" in "
+"``RESET_NESTING_TAGS``, and by giving \"li\" a ``NESTABLE_TAGS`` entry "
+"showing list of tags under which it can nest."
+msgstr "Beautiful Soupは<LI>タグを ``RESET_NESTING_TAGS`` に\"li\"を入れることで表現し、 \"li\" を入れ子可能である ``NESTABLE_TAGS`` に含ませることで表現します。"
+
+# 6380c375f9174a85a3a70e6899608102
+#: index.rst:1733
+msgid "This is also how we handle the nesting of table tags:"
+msgstr "入れ子可能なタグをどうやって扱っているかを説明します。"
+
+# 0892a4559cec4970bb41b21d09dc02f4
+#: index.rst:1750
+msgid ""
+"That is: <TD> tags can be nested within <TR> tags. <TR> tags can be nested "
+"within <TABLE>, <TBODY>, <TFOOT>, and <THEAD> tags. <TBODY>, <TFOOT>, and "
+"<THEAD> tags can be nested in <TABLE> tags, and <TABLE> tags can be nested "
+"in other <TABLE> tags. If you know about HTML tables, these rules should "
+"already make sense to you."
+msgstr "<TD>タグは<TR>タグの中に含められます。<TR>タグは<TABLE>, <TBODY>, <TFOOT>, <THEAD> タグの中に含められます。 <TBODY>, <TFOOT>, <THEAD>タグは<TABLE>の中に含められます。<TABLE>タグは別の<TABLE>タグに含められます。もし、HTMLテーブルを知っていれば、これらのルールが分かると思います。"
+
+# df6ae2860bd34da28f2d0bb01db3c334
+#: index.rst:1752
+msgid ""
+"One more example. Say the stack looks like ['html', 'p', 'table'] and "
+"Beautiful Soup encounters a <P> tag."
+msgstr "もう一つ例を上げます。スタックが ['html', 'p', 'table'] でBeautiful Soupが<P>タグにぶつかった時です。"
+
+# e561f714ffa54d1e92fdac31672e59af
+#: index.rst:1754
+msgid ""
+"At first glance, this looks just like the example where the stack is "
+"['html', 'p', 'b'] and Beautiful Soup encounters a <P> tag. In that example, "
+"we closed the <B> and <P> tags, because you can't have one paragraph inside "
+"another."
+msgstr "最初に見た時、これは['html', 'p', 'b']がスタックにあって、<P>タグを見つけた時の例と同じように見えます。あの例では、<B>タグと<P>タグを閉じました。なぜなら、一つのパラグラフは他のパラグラフを含められないからです。"
+
+# 42c1972bb2404da0936f1c1fbc553081
+#: index.rst:1756
+msgid ""
+"Except... you *can* have a paragraph that contains a table, and then the "
+"table contains a paragraph. So the right thing to do is to not close any of "
+"these tags. Beautiful Soup does the right thing:"
+msgstr "でも、テーブルの中にはパラグラフを含め *られる* のです。そのため、正しい実装ではこれらのタグを閉じてはいけないのです。Beautiful Soupは正しい動作をします。"
+
+# 8716f9893a0444c3afdaa15e59496ca5
+#: index.rst:1781
+msgid ""
+"What's the difference? The difference is that <TABLE> is in "
+"``RESET_NESTING_TAGS`` and <B> is not. A tag that's in "
+"``RESET_NESTING_TAGS`` doesn't get popped off the stack as easily as a tag "
+"that's not."
+msgstr "なにが違うのだって？違うところは <TABLE>は ``RESET_NESTING_TAGS`` に入っており、<B>は入っていないことです。 ``RESET_NESTING_TAGS`` に入っているタグは、入っていないタグよりスタックから取り出されにくいのです。"
+
+# 662c737e4f5745febbae2dcf27775d0e
+#: index.rst:1783
+msgid ""
+"Okay, hopefully you get the idea. Here's the ``NESTABLE_TAGS`` for the "
+"BeautifulSoup class. Correlate this with what you know about HTML, and you "
+"should be able to create your own ``NESTABLE_TAGS`` for bizarre HTML "
+"documents that don't follow the normal rules, and for other XML dialects "
+"that have different nesting rules."
+msgstr "オーケー。たぶんいいアイデアが出たでしょう。 BeautifulSoupクラスには ``NESTABLE_TAGS`` があります。これはあなたがHTMLについて知っていることと関連があります。つまり、普通のHTMLじゃない変なHTMLドキュメントや違う入れ子のルールを持つ他のXMLの方言のためには、自分で ``NESTABLE_TAGS`` を作る必要があります"
+
+# 7d8b670c1bce437ab74885bd13485d95
+#: index.rst:1819
+msgid ""
+"And here's BeautifulSoup's ``RESET_NESTING_TAGS``. Only the keys are "
+"important: ``RESET_NESTING_TAGS`` is actually a list, put into the form of a "
+"dictionary for quick random access."
+msgstr "そして、これがBeautifulSoupの ``RESET_NESTING_TAGS`` です。keyだけが重要です。 ``RESET_NESTING_TAGS`` は実際リストであり、高速なランダムアクセスのために辞書形式になっています。"
+
+# 10c481b2166848a08ee3d623a67f3e90
+#: index.rst:1831
+msgid ""
+"Since you're subclassing anyway, you might as well override "
+"``SELF_CLOSING_TAGS`` while you're at it. It's a dictionary that maps self-"
+"closing tag names to any values at all (like RESET_NESTING_TAGS, it's "
+"actually a list in the form of a dictionary). Then you won't have to pass "
+"that list in to the constructor (as selfClosingTags) every time you "
+"instantiate your subclass."
+msgstr "サブクラスを作っているのなら、 ``SELF_CLOSING_TAGS`` をオーバーライドするかもしれません。これは空要素タグの名前と他の全部の値(``RESET_NESTING_TAGS`` のように、実際にはリストの辞書形式)です。それから、インスタンスを作成するたびに、その ``SELF_CLOSING_TAGS`` をコンストラクタに ``selfClosingTags`` として渡す必要はありません。"
+
+# c3ce74ed535d4f9e99167b366278ec86
+#: index.rst:1834
+msgid "Entity Conversion"
+msgstr "エンティティの変換"
+
+# f5854feaa5054dbb8149cba7cf508c34
+#: index.rst:1836
+msgid ""
+"When you parse a document, you can convert HTML or XML entity references to "
+"the corresponding Unicode characters. This code converts the HTML entity "
+"\"&eacute;\" to the Unicode character LATIN SMALL LETTER E WITH ACUTE, and "
+"the numeric entity \"&#101;\" to the Unicode character LATIN SMALL LETTER E."
+msgstr "ドキュメントをパースするとき、HTMLかXMLの実体参照を対応するユニコード文字に変換できます。このコードはHTMLの\"&eacute;\"をユニコードのLATIN SMALL LETTER E WITH ACUTEに、\"&#101;\"をLATIN SMALL LETTER Eに変換します。"
+
+# 4a6c18b55d5241f2a20409dc7f9e0d6d
+#: index.rst:1845
+msgid ""
+"That's if you use ``HTML_ENTITIES`` (which is just the string \"html\"). If "
+"you use ``XML_ENTITIES`` (or the string \"xml\"), then only numeric entities "
+"and the five XML entities (\"&quot;\", \"&apos;\", \"&gt;\", \"&lt;\", and "
+"\"&amp;\") get converted. If you use ``ALL_ENTITIES`` (or the list [\"xml\", "
+"\"html\"]), then both kinds of entities will be converted. This last one is "
+"neccessary because &apos; is an XML entity but not an HTML entity."
+msgstr "これは、 ``HTML_ENTITIES`` (中身は単なる\"html\"という文字列)を使った場合です。もし、 ``XML_ENTITIES`` (あるいは\"xml\"という文字列)を使った場合、数字のエンティティと5つのXMLエンティティ(\"&quot;\", \"&apos;\", \"&gt;\", \"&lt;\", \"&amp;\")だけが変換されます。もし、 ``ALL_ENTITIES`` (あるいは [\"xml\", \"html\"] というリスト)を使った場合、二種類のエンティティが変換されます。最後の手法は \"&apos;\" はXMLエンティティですが、HTMLエンティティではないため、必要になります。"
+
+# a4939d9592214ffd91369ea85df81e18
+#: index.rst:1858
+msgid ""
+"If you tell Beautiful Soup to convert XML or HTML entities into the "
+"corresponding Unicode characters, then Windows-1252 characters (like "
+"Microsoft smart quotes) also get transformed into Unicode characters. This "
+"happens even if you told Beautiful Soup to convert those characters to "
+"entities."
+msgstr "Beautiful SoupにXMLかHTMLエンティティを対応するユニコード文字に変換するよう指示したら、 Windows-1252は(Microsoft smart qutesのように)も同じようにユニコード文字に変換されます。これはBeautiful Soupがこれらの文字をエンティティに変換する時にも起こります。"
+
+# 675039b0f4984b6fb990dd06f6baab1c
+#: index.rst:1876
+msgid ""
+"It doesn't make sense to create new HTML/XML entities while you're busy "
+"turning all the existing entities into Unicode characters."
+msgstr "新しいHTML/XMLエンティティを作る時、今ある全てのエンティティをユニコード文字に変換するのは意味が分からない。(訳註:意味が取れなかった)"
+
+# 1a6aa1e9d8d842fa91c2b341e75d349c
+#: index.rst:1881
+msgid "Sanitizing Bad Data with Regexps"
+msgstr "正規表現を使ってだめなデータをサニタイズする"
+
+# 7a2fb4fb531445c7b7b127f2c4ce9516
+#: index.rst:1883
+msgid ""
+"Beautiful Soup does pretty well at handling bad markup when \"bad markup\" "
+"means tags in the wrong places. But sometimes the markup is just malformed, "
+"and the underlying parser can't handle it. So Beautiful Soup runs regular "
+"expressions against an input document before trying to parse it."
+msgstr "Beautiful Soupは悪いマークアップをいい感じに扱ってくれます。ここで「悪いマークアップ」とはタグが間違った場所にあることです。しかし、時にはマークアップは単に変な形をしているだけで、基本的なパーサーは扱えなくなります。そのため、Beautiful Soupはパースする前に正規表現を走らせることができます。"
+
+# bfa18215a6a643f88ad64211113b924f
+#: index.rst:1885
+msgid ""
+"By default, Beautiful Soup uses regular expressions and replacement "
+"functions to do search-and-replace on input documents. It finds self-closing "
+"tags that look like <BR/>, and changes them to look like <BR />. It finds "
+"declarations that have extraneous whitespace, like <! --Comment-->, and "
+"removes the whitespace: <!--Comment-->."
+msgstr "標準ではBeautiful Soupは正規表現を入力されたドキュメントの置換機能として使います。 `<BR/>` のような空要素タグを見つけ、 `<BR />` に変換します。 `<! --コメント-->` のように適切でない空白を持つ装飾を見つけ、 `<!--コメント-->` のように空白を除去します。"
+
+# 5d00950886d44f4782874a5fcdc3c2b2
+#: index.rst:1887
+msgid ""
+"If you have bad markup that needs fixing in some other way, you can pass "
+"your own list of (``regular expression``, ``replacement`` function) tuples "
+"into the soup constructor, as the ``markupMassage`` argument."
+msgstr "もし、なにかしらの方法で直す必要がある悪いマークアップがある場合、 (``regular exporession`` , ``replacement`` )の関数のタプルを持つリストをsoupコンストラクタに ``markupMassage`` 引数として渡します。 (訳註:マッサージです。メッセージではありません)"
+
+# fcb7c8e9d6f141e681bdc5c7ef76a881
+#: index.rst:1889
+msgid ""
+"Let's take an example: a page that has a malformed comment. The underlying "
+"SGML parser can't cope with this, and ignores the comment and everything "
+"afterwards:"
+msgstr "例を見ましょう。変な形のコメントを持つページがあるとします。基本的なSGMLパーサーはこれに勝てず、コメントとそれ以降の文字を全て無視します。"
+
+# 6dc51487697a40d59a284abe1cbd66b8
+#: index.rst:1898
+msgid "Let's fix it up with a regular expression and a function:"
+msgstr "正規表現と関数で整形しましょう。"
+
+# cf8631c90b2945d7bfb80328a101616e
+#: index.rst:1907
+msgid ""
+"Oops, we're still missing the <BR> tag. Our markupMassage overrides the "
+"parser's default massage, so the default search-and-replace functions don't "
+"get run. The parser makes it past the comment, but it dies at the malformed "
+"self-closing tag. Let's add our new massage function to the default list, so "
+"we run all the functions."
+msgstr "おおっと。まだ<BR>タグが残っていました。今定義した ``markupMassage`` は標準のmassageを上書きするため、標準の置換関数は動きません。パーサーはコメントを通り過ぎ、変な空要素タグで死んでしまいます。新しいmassage関数を標準のリストに付け加えましょう。そうすれば全ての関数が動きます。"
+
+# a3caa210aab441a0b8a645e2941d50c1
+#: index.rst:1917
+msgid "Now we've got it all."
+msgstr "よし、これで全部動いた。"
+
+# 7b810483855944ef975567da7d061d90
+#: index.rst:1919
+msgid ""
+"If you know for a fact that your markup doesn't need any regular expressions "
+"run on it, you can get a faster startup time by passing in False for "
+"``markupMassage``."
+msgstr "あなたのマークアップが正規表現による置換を必要とするかどうかを知りたい場合、 ``False`` を ``markupMassage`` に渡すことですぐに分かります。"
+
+# e5c0dd20eea8493d9a20a51839b91229
+#: index.rst:1922
+msgid "Fun With SoupStrainers"
+msgstr "SoupStrainerで楽しく"
+
+# cded87c6670c44f68393bf183c880648
+#: index.rst:1924
+msgid ""
+"Recall that all the search methods take more or less :ref:`the same "
+"arguments <find_all>`. Behind the scenes, your arguments to a search method "
+"get transformed into a ``SoupStrainer`` object. If you call one of the "
+"methods that returns a list (like ``findAll``), the ``SoupStrainer`` object "
+"is made available as the source property of the resulting list."
+msgstr "全ての検索メソッドは :ref:`同じ引数を取る<find_all>` ことを思い出してください。この裏側では、検索メソッドの引数は ``SoupStrainer`` オブジェクトに変換されます。もし、(``findAll`` のような)リストを返すメソッドを呼んだ場合、 ``SoupStrainer`` オブジェクトは結果のリストのsourceプロパティとして現れてきます。"
+
+# 647172e4c23d4607a696012afd4a5d79
+#: index.rst:1938
+msgid ""
+"The ``SoupStrainer`` constructor takes most of the same arguments as find: "
+"name, attrs, text, and \\*\\*kwargs. You can pass in a ``SoupStrainer`` as "
+"the name argument to any search method:"
+msgstr "``SoupStrainer`` コンストラクタは name, attrs, text, \\*\\*kwargsとfindとほとんど同じ引数を取ります。 ``SoupStrainer`` を全部の検索メソッドに引数として渡すことができます。"
+
+# 57f5c5fd615d49f68758aeb880e2b6b0
+#: index.rst:1949
+msgid ""
+"Yeah, who cares, right? You can carry around a method call's arguments in "
+"many other ways. But another thing you can do with ``SoupStrainer`` is pass "
+"it into the soup constructor to restrict the parts of the document that "
+"actually get parsed. That brings us to the next section:"
+msgstr "いえーい。知ったこっちゃないね。だろ?このメソッドの呼び出し引数をいろいろな方法で渡すことができます。しかし、別の方法は、 ``SoupStrainer`` をsoupコンストラクタに渡し、ドキュメントのうち実際のパースする部分を制限することです。これの意味は次の章で述べます。"
+
+# d0f74d7ec0cf4eb0bc89ca1a13acd264
+#: index.rst:1954
+msgid "Improving Performance by Parsing Only Part of the Document"
+msgstr "ドキュメントの一部だけをパースすることで、性能を向上させる"
+
+# 75bcda7eb9da44b9a3631f08fad51494
+#: index.rst:1956
+msgid ""
+"Beautiful Soup turns every element of a document into a Python object and "
+"connects it to a bunch of other Python objects. If you only need a subset of "
+"the document, this is really slow. But you can pass in a ``SoupStrainer`` as "
+"the parseOnlyThese argument to the soup constructor. Beautiful Soup checks "
+"each element against the ``SoupStrainer``, and only if it matches is the "
+"element turned into a ``Tag`` or ``NavigableText``, and added to the tree."
+msgstr "Beautiful Soupはドキュメントの全てのエレメントをPythonオブジェクトにして、他の複数のPythonオブジェクトに接続します。もし、ドキュメントの一部分しか必要なければ、全部をパースすることはとても遅いことになります。そこで、 ``SoupStrainer`` を ``parseOnlyThese`` 引数としてsoupコンストラクタに渡すことができます。Beautiful Soupは個々のエレメントを ``SoupStrainer`` と照らし合わせ、適合したものだけを ``Tag`` や ``NavigableText`` に変換してツリーに付け加えます。"
+
+# cafbec59ef7c4e4ca20a20146c764667
+#: index.rst:1958
+msgid ""
+"If an element is added to to the tree, then so are its children—even if they "
+"wouldn't have matched the ``SoupStrainer`` on their own. This lets you parse "
+"only the chunks of a document that contain the data you want."
+msgstr "エレメントがツリーに加えられたら、そのエレメントは ``SoupStrainer`` とマッチしていなくても子要素となります。これにより、あなたが欲しいデータを持つドキュメントだけがパースされることになります。"
+
+# 5d71f5ada0b7435daee7d732f0ca3331
+#: index.rst:1960
+msgid "Here's a pretty varied document:"
+msgstr "ちょっと違ったドキュメントを出しましょう。"
+
+# 5c6d66d6bb404ec3851db95e14ccb88b
+#: index.rst:1973
+msgid ""
+"Here are several different ways of parsing the document into soup, depending "
+"on which parts you want. All of these are faster and use less memory than "
+"parsing the whole document and then using the same ``SoupStrainer`` to pick "
+"out the parts you want."
+msgstr "このドキュメントをsoupにパースするには、どの部分が欲しいかによって、いくつか方法があります。以下の例は全て、 ``SoupStrainer`` を使うことでドキュメント全体をパースするより高速でメモリ消費が少ないです。"
+
+# 1891445fb0e94c20b01a5b2c33c6eaa1
+#: index.rst:1999
+msgid ""
+"There is one major difference between the ``SoupStrainer`` you pass into a "
+"search method and the one you pass into a soup constructor. Recall that the "
+"``name`` argument can take a function whose argument is a ``Tag`` object. "
+"You can't do this for a ``SoupStrainer``'s ``name``, because the "
+"``SoupStrainer`` is used to decide whether or not a ``Tag`` object should be "
+"created in the first place. You can pass in a function for a "
+"``SoupStrainer``'s name, but it can't take a ``Tag`` object: it can only "
+"take the tag name and a map of arguments."
+msgstr "検索メソッドに渡した ``SoupStriner`` とsoupコンソトラクタに渡した ``SoupStriner`` とでは大きな違いが一つあります。 ``name`` 引数は、 ``Tag`` オブジェクトを引数に取る関数を、引数に取ることが出来ることを思い出してください。これを ``SoupStrainer`` の ``name`` にすることができます。なぜなら ``SoupStrainer`` は ``Tag`` オブジェクトが最初の場所で作成されるかどうかを決定するために使われる為です。 ``SoupStrainer`` の ``name`` に関数を渡せますが、 ``Tag`` オブジェクトは取れません。タグの名前か引数のマップだけを与えることが出来ます。"
+
+# 45d5db0e00c24685bb1e517c9f20daaf
+#: index.rst:2010
+msgid "Improving Memory Usage with extract"
+msgstr "extractを使ってメモリ使用量を削減する"
+
+# 6913f9f4f5d6463db9c11b19b99d55a9
+#: index.rst:2012
+msgid ""
+"When Beautiful Soup parses a document, it loads into memory a large, densely "
+"connected data structure. If you just need a string from that data "
+"structure, you might think that you can grab the string and leave the rest "
+"of it to be garbage collected. Not so. That string is a ``NavigableString`` "
+"object. It's got a parent member that points to a ``Tag`` object, which "
+"points to other ``Tag`` objects, and so on. So long as you hold on to any "
+"part of the tree, you're keeping the whole thing in memory."
+msgstr "Beautiful Soupがドキュメントをパースする時、ドキュメントを大きな密結合なデータ構造としてメモリにロードします。単にデータ構造から文字を取り出したいだけの場合、文字列を取って残りは全部ガベージコレクタにくれてやってもいいと思うでしょう。この文字列は ``NavigableString`` です。これの親メンバは ``Tag`` オブジェクトを指し、それがさらに別の ``Tag`` オブジェクトを指し、…と続きます。だから、ツリーのどの一部分を持ったとしても、ツリー全部をメモリに持つことになるのです。"
+
+# a2eea237bb4149f8a50cb7a2fc394332
+#: index.rst:2014
+msgid ""
+"The ``extract`` method breaks those connections. If you call ``extract`` on "
+"the string you need, it gets disconnected from the rest of the parse tree. "
+"The rest of the tree can then go out of scope and be garbage collected, "
+"while you use the string for something else. If you just need a small part "
+"of the tree, you can call extract on its top-level ``Tag`` and let the rest "
+"of the tree get garbage collected."
+msgstr "``extract`` メソッドはこの接続を壊します。 ``extract`` を必要な文字列に対して呼ぶと、残りのパースツリーから切り離します。ツリーの残りの部分はスコープを外れ、取った文字列を使っている間にガベージコレクタに回収されます。ツリーの小さな部分だけが必要な場合、トップレベルの ``Tag`` に対して ``extract`` を呼ぶと、ツリーの残り全部がガベージコレクタに回収されます。"
+
+# c149caf549cb4935b4f80fa02ce4da8d
+#: index.rst:2016
+msgid ""
+"This works the other way, too. If there's a big chunk of the document you "
+"don't need, you can call extract to rip it out of the tree, then abandon it "
+"to be garbage collected while retaining control of the (smaller) tree."
+msgstr "これは他の方法でも同じように動きます。必要がない巨大なドキュメントがあったとき、 ``extract`` を呼ぶとツリーを破壊され、(もっと小さい)ツリーを作っている間にガベージコレクタに回収されます。"
+
+# 0e0a19c4ad46488493ef01731ea2bdab
+#: index.rst:2018
+msgid ""
+"If extract doesn't work for you, you can try ``Tag.decompose``. It's slower "
+"than ``extract`` but more thorough. It recursively disassembles a ``Tag`` "
+"and its contents, disconnecting every part of a tree from every other part."
+msgstr "もし ``extract`` がちゃんと動かない場合、 ``Tag.decompose`` を使います。これは ``extract`` より遅いですが、もっと徹底的です。これは ``Tag`` とそのコンテンツを再帰的に分解し、ツリーの全ての部分を、他の全ての部分から切り離します。"
+
+# ab8b9f4c02c94659b79bae4f99b5673f
+#: index.rst:2020
+msgid ""
+"If you find yourself destroying big chunks of the tree, you might have been "
+"able to save time by not parsing that part of the tree in the first place."
+msgstr "大きな塊のツリーを自分で破壊したい場合、最初からツリーの一部だけをパースするようにすればもっと時間を節約できるかもしれませんよ。"
+
+# abcab8851aeb43688acacfa272c15129
+#: index.rst:2023
+msgid "See Also"
+msgstr "参考"
+
+# defaa347e10d424ea097b8934ddd8fb0
+#: index.rst:2026
+msgid "Applications that use Beautiful Soup"
+msgstr "Beautiful Soupを使っているアプリケーション"
+
+# ddf5b05c26594b6db09bf337568c8519
+#: index.rst:2028
+msgid ""
+"Lots of real-world applications use Beautiful Soup. Here are the publicly "
+"visible applications that I know about:"
+msgstr "たくさんの実際に使われているアプリケーションがBeautiful Soupを使っています。私が知っている公開されているアプリケーションを記します。"
+
+# ba2f8ff1a26e4e55a1c4273758f39143
+#: index.rst:2030
+msgid ""
+"`Scrape 'N' Feed <http://www.crummy.com/software/ScrapeNFeed>`_ is designed "
+"to work with Beautiful Soup to build RSS feeds for sites that don't have "
+"them."
+msgstr "`Scrape 'N' Feed <http://www.crummy.com/software/ScrapeNFeed>`_ はRSSフィードを持たないサイトにフィードを作成するツールです。"
+
+# 0aee67ea40b74feba13fe15085bcad30
+#: index.rst:2031
+msgid ""
+"`htmlatex <http://www.meangrape.com/htmlatex/>`_ uses Beautiful Soup to find "
+"LaTeX equations and render them as graphics."
+msgstr "`htmlatex <http://www.meangrape.com/htmlatex/>`_ はLaTexの方程式を見つけて画像として描画する部分にBeautiful Soupを使っています。"
+
+# a8f039d342394797a88aa3fa4a1757a7
+#: index.rst:2032
+msgid ""
+"`chmtopdf <http://code.google.com/p/chmtopdf/>`_ converts CHM files to PDF "
+"format. Who am I to argue with that?"
+msgstr "`chmtopdf <http://code.google.com/p/chmtopdf/>`_ はCHMファイルをPDFに変換します。これと私が議論してるって？(訳註: どういう意味だろう)"
+
+# b3458c65c3e542dd8b66edb9d0b71718
+#: index.rst:2033
+msgid ""
+"Duncan Gough's `Fotopic backup <http://www.suttree.com/code/fotopic/>`_ uses "
+"Beautiful Soup to scrape the Fotopic website."
+msgstr "Duncan Gough の `Fotopic backup <http://www.suttree.com/code/fotopic/>`_ はBeautiful SoupをFotopic Webサイトをスクレイピングするのに使っています。"
+
+# c49823e037684b379b891493531fe77d
+#: index.rst:2034
+msgid ""
+"Iñigo Serna's `googlenews.py <http://inigo.katxi.org/devel/misc/googlenews."
+"py>`_ uses Beautiful Soup to scrape Google News (it's in the parse_entry and "
+"parse_category functions)"
+msgstr "Iñigo Sernaの `googlenews.py <http://inigo.katxi.org/devel/misc/googlenews.py>`_ はBeautiful Soupをparse_entryとparse_category関数を使ってGoogle Newsをスクレイピングするのに使っています。。"
+
+# 732e544c5cd44d8489458e278bd7c1f3
+#: index.rst:2035
+msgid ""
+"The `Weather Office Screen Scraper <http://potheads.ca/~cgm/weatheroffice/"
+">`_ uses Beautiful Soup to scrape the Canadian government's weather office "
+"site."
+msgstr "`Weather Office Screen Scraper <http://potheads.ca/~cgm/weatheroffice/>`_ はカナダ政府の気象サイトをスクレイピングするのに使っています。"
+
+# b9fde68e5ad84ffcbed57162027639c1
+#: index.rst:2036
+msgid ""
+"`News Clues <http://www.cs.duke.edu/~pbh/newsclues.html>`_ uses Beautiful "
+"Soup to parse RSS feeds."
+msgstr "`News Clues <http://www.cs.duke.edu/~pbh/newsclues.html>`_ はRSS feedをパースするのに使っています。"
+
+# 4f985fd8454f4977adab68049c336d0f
+#: index.rst:2037
+msgid ""
+"`BlinkFlash <http://blinkflash.sourceforge.net/>`_ uses Beautiful Soup to "
+"automate form submission for an online service."
+msgstr "`BlinkFlash <http://blinkflash.sourceforge.net/>`_ はオンラインサービスの登録を自動化するのに使っています。"
+
+# bd4f555a7da9493c9d1a67ef8ae357e8
+#: index.rst:2038
+msgid ""
+"The `linky <http://www.voidspace.org.uk/python/programs.shtml#linky>`_ link "
+"checker uses Beautiful Soup to find a page's links and images that need "
+"checking."
+msgstr "`linky <http://www.voidspace.org.uk/python/programs.shtml#linky>`_ というリンクチェッカーはBeautiful Soupをページのリンクとチェックが必要な画像を見つけるのに使っています。"
+
+# a4efe5b00704451a9daed1358057ab9d
+#: index.rst:2039
+msgid ""
+"`Matt Croydon <http://www.postneo.com/2005/03/28/mobile-screen-scraping-with-"
+"beautifulsoup-and-python-for-series-60>`_ got Beautiful Soup 1.x to work on "
+"his Nokia Series 60 smartphone. `C.R. Sandeep <http://sandeep.weblogs.us/"
+"archives/024473.html>`_ wrote a real-time currency converter for the Series "
+"60 using Beautiful Soup, but he won't show us how he did it."
+msgstr "`Matt Croydon <http://www.postneo.com/2005/03/28/mobile-screen-scraping-with-beautifulsoup-and-python-for-series-60>`_ はBeautiful Soup 1.xを NokiaのSeries 60 スマートフォンで動かしました。 `C.R. Sandeep <http://sandeep.weblogs.us/archives/024473.html>`_ はSeries 60で動くリアルタイムの外貨変換ツールを書きました。でも、どうやって実現したかは公開されていません。"
+
+# 41b54f135d7d48408d842788168cfaed
+#: index.rst:2040
+msgid ""
+"Here's `a short script <http://jacobian.org/recipes/archives/2005/03/21/"
+"fixing-tracks-bought-from-allofmp3com/>`_ from jacobian.org to fix the "
+"metadata on music files downloaded from allofmp3.com."
+msgstr "jacobian.org からはallofmp3.comからダウンロードした音楽ファイルのメタデータを修正する `短い文章 <http://jacobian.org/recipes/archives/2005/03/21/fixing-tracks-bought-from-allofmp3com/>`_ が出ています。"
+
+# c1312eafd0634d9abfdcbd253c0ed595
+#: index.rst:2041
+msgid ""
+"The `Python Community Server <http://www.pycs.net/>`_ uses Beautiful Soup in "
+"its spam detector."
+msgstr "`Python Community Server <http://www.pycs.net/>`_ はspam検知に使っています。"
+
+# 812f2407306d481fab4dfb07f48589ff
+#: index.rst:2044
+msgid "Similar libraries"
+msgstr "類似ライブラリ"
+
+# dc310399cf324f7b84075a2096f8d614
+#: index.rst:2046
+msgid ""
+"I've found several other parsers for various languages that can handle bad "
+"markup, do tree traversal for you, or are otherwise more useful than your "
+"average parser."
+msgstr "とんでもないマークアップを扱い、ツリーを渡り、標準的なパーサーよりもっと良いパーサーをいろいろな言語で実装しているのを見つけました。"
+
+# 91fed54d9a56496eabc0aecdd320a67f
+#: index.rst:2048
+msgid ""
+"I've ported Beautiful Soup to Ruby. The result is `Rubyful Soup <http://www."
+"crummy.com/software/RubyfulSoup/>`_ ."
+msgstr "私は、Beautiful SoupをRubyに移植しました。 `Rubyful Soup <http://www.crummy.com/software/RubyfulSoup/>`_ です。"
+
+# a7920db9ee3f48a2b07873bf792a7dff
+#: index.rst:2049
+msgid ""
+"`Hpricot <http://code.whytheluckystiff.net/hpricot/>`_ is giving Rubyful "
+"Soup a run for its money."
+msgstr "`Hpricot <http://code.whytheluckystiff.net/hpricot/>`_ はRubyful Soupを相手に善戦しました。"
+
+# daf1fc1c4c584cdfa4d31db2abec6e8d
+#: index.rst:2050
+msgid ""
+"`ElementTree <http://effbot.org/zone/element-index.htm>`_ is a fast Python "
+"XML parser with a bad attitude. I love it."
+msgstr "`ElementTree <http://effbot.org/zone/element-index.htm>`_ は高速なPythonのXMLパーサーですが態度が悪いです。私はこれが好きです。"
+
+# 6b6f15bd1a89454ea1c2f50b391ec5a4
+#: index.rst:2051
+msgid ""
+"`Tag Soup <http://home.ccil.org/~cowan/XML/tagsoup/>`_ is an XML/HTML parser "
+"written in Java which rewrites bad HTML into parseable HTML."
+msgstr "`Tag Soup <http://home.ccil.org/~cowan/XML/tagsoup/>`_ はJavaで書かれたXML/HTMLパーサーで、ダメなHTMLをパースできるHTMLに書きなおしてくれます。"
+
+# b5f42d63d3e44dff9408a835469fa889
+#: index.rst:2052
+msgid ""
+"`HtmlPrag <http://www.neilvandyke.org/htmlprag/>`_ is a Scheme library for "
+"parsing bad HTML."
+msgstr "`HtmlPrag <http://www.neilvandyke.org/htmlprag/>`_ はダメなHTMLをパースするSchemeライブラリです。"
+
+# 915b8f689d814dc382a1a19a852aec22
+#: index.rst:2053
+msgid ""
+"`xmltramp <http://www.aaronsw.com/2002/xmltramp/>`_ is a nice take on a "
+"'standard' XML/XHTML parser. Like most parsers, it makes you traverse the "
+"tree yourself, but it's easy to use."
+msgstr "`xmltramp <http://www.aaronsw.com/2002/xmltramp/>`_ は標準のXML/XHTMLパーサーです。他のパーサーと同じようにツリーを利用者が渡っていかなければなりませんが、これは簡単に使えます。"
+
+# e07ee9b963214d898db7ae46fe6d6960
+#: index.rst:2054
+msgid ""
+"`pullparser <http://wwwsearch.sourceforge.net/pullparser/>`_ includes a tree-"
+"traversal method."
+msgstr "`pullparser <http://wwwsearch.sourceforge.net/pullparser/>`_ はツリーを渡るメソッドを提供します。"
+
+# 7d3d134b6a624d1592127b67b35c06fa
+#: index.rst:2055
+msgid ""
+"Mike Foord didn't like the way Beautiful Soup can change HTML if you write "
+"the tree back out, so he wrote `HTML Scraper <http://aspn.activestate.com/"
+"ASPN/Cookbook/Python/Recipe/286269>`_. It's basically a version of "
+"HTMLParser that can handle bad HTML. It might be obsolete with the release "
+"of Beautiful Soup 3.0, though; I'm not sure."
+msgstr "Mike FoordはBeautiful Soupがツリーを変えた時にHTMLを変更するのが気に入りませんでした。そのため、 `HTML Scraper <http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/286269>`_ を書きました。これはダメなHTMLを扱えるHTMLParserの一つです。これはBeautiful Soup 3.0のリリースを古びたものにするかもしれません。知らないけど。"
+
+# 3d6cd9b1799248df8ac63444c3746a9c
+#: index.rst:2056
+msgid ""
+"Ka-Ping Yee's `scrape.py <http://zesty.ca/python/scrape.py>`_ combines page "
+"scraping with URL opening."
+msgstr "Ka-Ping Yeeの `scrape.py <http://zesty.ca/python/scrape.py>`_ はURLで開いたページをスクレイピングして、合成します。"
+
+# 41645bd20fb34f03bd6ea3ccf98dad68
+#: index.rst:2059
+msgid "Conclusion"
+msgstr "最後に"
+
+# a29dfc0fa43f4a918f0e3e7c7943b2d9
+#: index.rst:2061
+msgid ""
+"That's it! Have fun! I wrote Beautiful Soup to save everybody time. Once you "
+"get used to it, you should be able to wrangle data out of poorly-designed "
+"websites in just a few minutes. Send me email if you have any comments, run "
+"into problems, or want me to know about your project that uses Beautiful "
+"Soup."
+msgstr "これで終わりです！楽しんでください！私はBeautiful Soupをみんなの時間を節約するために作りました。これに慣れると、数分で貧弱なデザインのwebサイトのデータを議論できるようになりますよ。もしコメント、問題、Beautiful Soupをプロジェクトに使ってるよ！ということなどがあれば私にメールを下さい。"
+
+# 17a79e2e3c704b5da00dc6ab00c44713
+#: index.rst:2063
+msgid "--Leonard"
+msgstr "--Leonard"
+
+# 2849388923734b2799472b7a9cb36939
+#: index.rst:2067
+msgid ""
+"This document (`source <http://www.crummy.com/source/software/BeautifulSoup/"
+"documentation.bhtml>`_) is part of Crummy, the webspace of `Leonard "
+"Richardson <http://www.crummy.com/self/>`_ (`contact information <http://www."
+"crummy.com/self/contact.html>`_ )."
+msgstr "`このドキュメント <http://www.crummy.com/source/software/BeautifulSoup/documentation.bhtml>`_ は `Leonard Richardson <http://www.crummy.com/self/>`_ が保有するWeb空間である、Crummyの一部です。  `連絡先 <http://www.crummy.com/self/contact.html>`_ 。 (訳註: 日本語訳者は WAKAYAMA Shirouです)"
+
+# 60d252a4aad24ba585e4d5ff10f3a5cf
+#: index.rst:2069
+msgid ""
+"Crummy is © 1996-2011 Leonard Richardson. Unless otherwise noted, all text "
+"licensed under a `Creative Commons Licens <http://creativecommons.org/"
+"licenses/by-sa/2.0/>`_ ."
+msgstr "Crummy is © 1996-2011 Leonard Richardson. 特別な言及がない限り、全てのテキストは `クリエイティブ・コモンズ ライセンス(CC BY-SA 2.0) <http://creativecommons.org/licenses/by-sa/2.0/>`_ に従います。"
+
+# 6c44f481fe094da0b388f90745361f6f
+#: index.rst:2073
+msgid "Indices and tables"
+msgstr "索引とテーブル"
+
+# 34d319f37dac427f96bc5ea5022fdabd
+#: index.rst:2075
+msgid ":ref:`genindex`"
+msgstr ":ref:`genindex`"
+
+# 534f8359c795422a86f8bf0d7568e317
+#: index.rst:2076
+msgid ":ref:`modindex`"
+msgstr ":ref:`modindex`"
+
+# 9e7cc8eae8cc44cf88fabccaf46479d3
+#: index.rst:2077
+msgid ":ref:`search`"
+msgstr ":ref:`search`"
